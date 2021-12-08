@@ -1,0 +1,29 @@
+snippet bc "boiler plate code"
+#include <iostream>
+using namespace std;
+
+int main(){
+	$0
+	return 0;
+}
+endsnippet
+
+snippet iarr "input arr"
+int n;
+cin >> n;
+
+int arr[n];
+for(int i=0;i<n;i++){
+	cin >> arr[i];
+}
+endsnippet
+
+snippet oarr "output arr"
+for(int i=0;i<n;i++){
+	cout << arr[i] << " ";
+}cout << endl;
+endsnippet
+
+snippet incc "include"
+#include <$0
+endsnippet
