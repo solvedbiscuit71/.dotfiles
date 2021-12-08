@@ -117,7 +117,7 @@ brew install stow
 After installing all of the dependencies. Clone the repository and run the install script by,
 
 ```sh
-git clone https://github.com/solvedbiscuit71/.dotfiles.git ~/.dotfiles | ./install
+git clone https://github.com/solvedbiscuit71/.dotfiles.git ~/.dotfiles | ~/.dotfiles/install
 ```
 
 Then, restart your terminal for the changes to take affect.
