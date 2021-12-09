@@ -27,7 +27,7 @@ curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD
 
 A Terminal Emulator is a software that is used for accessing the shell such as __bash__ and __zsh__
 
-Here, we are using [[https://github.com/kovidgoyal/kitty|kitty]]
+Here, we are using [https://github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty)
 ```sh
 brew install --cask kitty
 ```
@@ -106,7 +106,7 @@ pip install neovim
 
 ## Stow
 
-Stow is a __symlink farm manager__ which is used to manager the dotfiles via creating symlink.
+Stow is a __symlink manager__ which is used to manager the dotfiles via creating symlink in there respected locations.
 
 ```sh
 brew install stow
