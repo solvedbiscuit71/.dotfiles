@@ -1,19 +1,11 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- C/C++
-require'lspconfig'.clangd.setup {
-  capabilities = capabilities,
-}
+local nvim_lsp = require'lspconfig'
+local servers = {'clangd','html','pyright'}
 
--- HTML
-
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
-
--- Python
-require'lspconfig'.pyright.setup {
-  capabilities = capabilities,
-}
-
+for _,lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup{
+        capabilities = capabilities,
+    }
+end

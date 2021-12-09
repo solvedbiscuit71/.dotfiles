@@ -19,6 +19,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 
 " Custom text objects
 Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
 
 " Git
