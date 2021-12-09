@@ -114,10 +114,21 @@ brew install stow
 
 # Setting .dotfiles
 
-After installing all of the dependencies. Clone the repository and run the install script by,
+After installing all of the dependencies. Clone the repository by,
 
 ```sh
-git clone https://github.com/solvedbiscuit71/.dotfiles.git ~/.dotfiles | ~/.dotfiles/install
+git clone https://github.com/solvedbiscuit71/.dotfiles.git ~/.dotfiles
+```
+
+Before running the install script add user privileges for executing.
+
+```sh
+cd ~/.dotfiles/
+chmod +x install.sh remove.sh clear_env.sh
+./install.sh
 ```
 
 Then, restart your terminal for the changes to take affect.
+
+__Note__:
+if configuration files already exist, it's move to `~/.dotfiles_backup/`
