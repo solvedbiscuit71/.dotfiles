@@ -34,7 +34,7 @@ brew install --cask kitty
 
 ## Oh My Zsh
 
-oh my zsh is a framework for managing your zsh configuration
+oh my zsh is a framework for managing your zsh configuration & plugins
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -54,18 +54,18 @@ brew install --cask font-hack-nerd-font
 
 For more font check : [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
 
-### Auto suggestion
+### Auto suggestion & Syntax Highlighting
 
-Auto suggestion goes through your previous command and show suggestion based on that,
+Auto suggestion goes through your previous command and show suggestion based on that.
 
 ```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ```
 
-### Syntax highlighting
+Syntax Highlighting provides nice highlights with commands.
 
 ```sh
-brew install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ```
 
 ### Dracula theme
