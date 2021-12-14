@@ -1,0 +1,19 @@
+snippet imrc "importing react & component"
+import React, { Component } from "react"
+$0
+endsnippet
+
+snippet cc "class component"
+class $1 extends Component{
+	state = {};
+	render(){
+		return (
+		<div>
+		$0
+		</div>
+		);
+	}
+}
+
+export default $1
+endsnippet
