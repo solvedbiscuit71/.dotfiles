@@ -9,7 +9,7 @@ let g:mapleader = ' '
 " ================================
 
 " nnoremap Y y$ (Since, it's make default in nvim 0.6)
-nnoremap gf :edit <cfile><CR>
+" nnoremap gf :edit <cfile><CR> (As it's not working well)
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
@@ -51,7 +51,7 @@ nnoremap <leader>% :lcd %:p:h<CR>
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> R <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> H <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> gh <cmd>lua vim.lsp.buf.code_action()<CR>
@@ -77,21 +77,15 @@ nnoremap <leader>gi :G rebase -i HEAD
 " gitsigns
 " ================================
 
-nnoremap <silent> H <cmd>lua require"gitsigns".preview_hunk()<CR>
-nnoremap <leader>hs <cmd>lua require"gitsigns".stage_hunk()<CR>
-nnoremap <leader>hr <cmd>lua require"gitsigns".undo_stage_hunk()<CR>
-nnoremap <leader>hu <cmd>lua require"gitsigns".reset_hunk()<CR>
-nnoremap <silent> <leader>gt :Gitsigns toggle_current_line_blame<CR>
-nnoremap <leader>] :Gitsigns next_hunk<CR>
-nnoremap <leader>[ :Gitsigns prev_hunk<CR>
+" Check: lua/gitsigns-config.lua
 
 " ================================
 " telescope
 " ================================
 
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({prompt_title = "   ",cwd = ".",no_ignore = "true",})<CR>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files({prompt_title = "   ",})<CR>
-nnoremap <leader>fn <cmd>lua require('telescope.builtin').find_files({prompt_title = "   ",cwd = "~/.config/nvim",})<CR>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({prompt_title = "< CWD >"})<CR>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files({prompt_title = "< GIT >",})<CR>
+nnoremap <leader>fn <cmd>lua require('telescope.builtin').find_files({prompt_title = "< VIM >",cwd = "~/.config/nvim",})<CR>
 
 " ================================
 " harpoon
@@ -115,7 +109,7 @@ nnoremap <leader>t :tabnew <bar> :ter<CR>
 " markdown Preview
 " ================================
 
-nnoremap <leader>p :MarkdownPreviewToggle<CR>
+nnoremap <leader>mp :MarkdownPreviewToggle<CR>
 
 " ================================
 " debugger
