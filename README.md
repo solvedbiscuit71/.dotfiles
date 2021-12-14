@@ -27,9 +27,14 @@ curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD
 
 A Terminal Emulator is a software that is used for accessing the shell such as __bash__ and __zsh__
 
-Here, we are using [https://github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty)
+use kitty,
 ```sh
 brew install --cask kitty
+```
+
+or alacritty,
+```sh
+brew install --cask alacritty
 ```
 
 ## Oh My Zsh
