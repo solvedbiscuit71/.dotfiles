@@ -5,6 +5,7 @@ backup=~/.dotfiles_backup/
 Dir=(
     ~/.config/nvim \
     ~/.config/kitty \
+    ~/.cache/alacritty \
     ~/bg.png \
     ~/.zshrc
 )
