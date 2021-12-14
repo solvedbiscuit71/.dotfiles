@@ -7,7 +7,8 @@ Dir=(
     ~/.config/kitty \
     ~/.cache/alacritty \
     ~/bg.png \
-    ~/.zshrc
+    ~/.zshrc \
+    ~/.tmux.conf
 )
 
 # Checking for backup dir
