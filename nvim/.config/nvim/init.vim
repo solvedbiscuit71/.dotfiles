@@ -21,6 +21,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
+" Note: gitsigns also provides a text objects (ih -> hunk)
 
 " Git
 Plug 'lewis6991/gitsigns.nvim'
@@ -61,6 +62,7 @@ Plug 'puremourning/vimspector'
 " Documentation
 Plug 'vimwiki/vimwiki'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'alvan/vim-closetag'
 
 " Practice!!
 Plug 'ThePrimeagen/vim-be-good'
@@ -99,6 +101,7 @@ luafile ~/.config/nvim/lua/worktree-config.lua
 luafile ~/.config/nvim/lua/treesitter-config.lua
 luafile ~/.config/nvim/lua/cmp-config.lua
 luafile ~/.config/nvim/lua/lsp-config.lua
+luafile ~/.config/nvim/lua/telescope-config.lua
 
 source ~/.config/nvim/plugin/starify-config.vim
 source ~/.config/nvim/plugin/airline-config.vim
