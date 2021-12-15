@@ -70,7 +70,7 @@ nnoremap <leader>gl :G log --oneline --graph<CR>
 nnoremap <leader>gu :G restore % <bar> :e!<CR>
 nnoremap <leader>gf :diffget //2<CR>
 nnoremap <leader>gj :diffget //3<CR>
-nnoremap <leader>fw <cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>
+nnoremap <leader>gw <cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>
 nnoremap <leader>ga :G worktree add ../
 nnoremap <leader>gr :G worktree remove ../
 nnoremap <leader>gd :G branch -d
