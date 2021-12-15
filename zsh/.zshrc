@@ -70,3 +70,6 @@ alias da="find ./ -name '*.out' -delete | find ./ -name '*.out.dSYM' -exec rm -R
 
 # Alias to edit dotfiles
 alias rc="vim ~/.zshrc"
+
+# Alias tsc
+alias ts="tsc --outFile output.js --target es6"

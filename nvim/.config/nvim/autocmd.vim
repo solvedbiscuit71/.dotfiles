@@ -14,6 +14,7 @@ augroup END
 augroup COMPILER
     autocmd!
     autocmd BufEnter *.cpp :compiler clang
+    autocmd BufEnter *.ts :compiler tsc
 augroup END
 
 " Setting SpellChecker
