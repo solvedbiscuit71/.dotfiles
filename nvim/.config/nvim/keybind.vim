@@ -44,6 +44,9 @@ nnoremap <leader>b <C-^>
 nnoremap <leader>m :make<CR>
 nnoremap <leader>% :lcd %:p:h<CR>
 
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [q :cprev<CR>
+
 " ================================
 " lsp
 " ================================
@@ -86,6 +89,7 @@ nnoremap <leader>gi :G rebase -i HEAD
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({prompt_title = "< CWD >"})<CR>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files({prompt_title = "< GIT >",})<CR>
 nnoremap <leader>fn <cmd>lua require('telescope.builtin').find_files({prompt_title = "< VIM >",cwd = "~/.config/nvim",})<CR>
+nnoremap <leader>fw <cmd>lua require('telescope.builtin').live_grep({prompt_title = "< GREP >"})<CR>
 
 " ================================
 " harpoon
