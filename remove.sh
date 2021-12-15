@@ -2,6 +2,9 @@
 
 for folder in */ ;
 do
-    echo "Removing $folder"
-    stow -D $folder
+    if [ -d $folder ]
+    then
+        echo "Removing $folder"
+        stow -D $folder
+    fi
 done

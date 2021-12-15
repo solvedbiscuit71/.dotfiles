@@ -5,7 +5,10 @@
 
 for folder in */ ;
 do
-    echo "Linking $folder"
-    stow -D $folder
-    stow $folder
+    if [ -d $folder ]
+    then
+        echo "Linking $folder"
+        stow -D $folder
+        stow $folder
+    fi
 done
