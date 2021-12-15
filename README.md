@@ -133,7 +133,7 @@ chmod +x install.sh remove.sh clear_env.sh
 ./install.sh
 ```
 
-Then, restart your terminal for the changes to take affect.
+Then, restart your terminal for the changes to take effect.
 
 __Note__:
 if configuration files already exist, it's move to `~/.dotfiles_backup/`
