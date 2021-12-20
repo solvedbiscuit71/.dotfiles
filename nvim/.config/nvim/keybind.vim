@@ -42,7 +42,11 @@ nnoremap <leader>d :bw<CR>
 
 nnoremap <leader>b <C-^>
 nnoremap <leader>m :make<CR>
-nnoremap <leader>% :lcd %:p:h<CR>
+nnoremap <leader>% :source %<CR>
+
+nnoremap <silent> <leader>t :tabnew<CR>:Ex ~<CR>
+nnoremap <silent> <leader>c :tabclose<CR>
+nnoremap <silent> cd :lcd %:p:h<CR>
 
 nnoremap <silent> ]q :cnext<CR>
 nnoremap <silent> [q :cprev<CR>
@@ -107,7 +111,7 @@ nnoremap <leader>; <cmd>lua require("harpoon.ui").nav_file(4)<CR>
 " ================================
 
 tnoremap <Esc> <C-\><C-n>
-nnoremap <leader>t :tabnew <bar> :ter<CR>
+nnoremap <leader>` :tabnew <bar> :ter<CR>
 
 " ================================
 " markdown Preview

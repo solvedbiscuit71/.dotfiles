@@ -83,7 +83,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nohls
-set ic
 set signcolumn=yes
 set scrolloff=999
 
