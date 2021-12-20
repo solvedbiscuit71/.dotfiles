@@ -7,4 +7,4 @@ if exists(":CompilerSet") != 2
     command -nargs=* CompilerSet setlocal <args>
 endif
 
-CompilerSet makeprg=tsc\ %:t\ --target\ es6\ --outFile\ %:p:h/output.js
+CompilerSet makeprg=tsc\ %\ --target\ es6\ --outFile\ %:p:h/output.js

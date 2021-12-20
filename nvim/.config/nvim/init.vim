@@ -91,6 +91,12 @@ let g:python3_host_prog='/opt/homebrew/bin/python3'
 let g:vimwiki_list = [{'path': '~/Documents/.vimwiki',
                        \ 'path_html': '~/Documents/.vimwiki_html'}]
 
+let g:closetag_filenames = '*.html,*.jsx,*.tsx'
+let g:closetag_regions =  {
+\ 'typescript.tsx': 'jsxRegion,tsxRegion',
+\ 'javascript.jsx': 'jsxRegion',
+\ }
+
 " ======================
 " Plugin's Configuration
 " ======================
