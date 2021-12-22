@@ -34,6 +34,8 @@ _fzf_comprun() {
   esac
 }
 
+bindkey '^y' autosuggest-accept
+
 # --------------------
 # User configuration
 # --------------------
