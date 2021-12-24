@@ -110,8 +110,8 @@ nnoremap <leader>; <cmd>lua require("harpoon.ui").nav_file(4)<CR>
 " terminal
 " ================================
 
-tnoremap <Esc> <C-\><C-n>
-nnoremap <leader>` :tabnew <bar> :ter<CR>
+tnoremap <silent> <Esc> <C-\><C-n>:FloatermToggle<CR>
+nnoremap <silent> <leader>` :FloatermToggle<CR>
 
 " ================================
 " markdown Preview
@@ -120,17 +120,17 @@ nnoremap <leader>` :tabnew <bar> :ter<CR>
 nnoremap <leader>mp :MarkdownPreviewToggle<CR>
 
 " ================================
-" debugger
+" debugger [ uncommit to use it ]
 " ================================
 
-nnoremap <leader>yy :call vimspector#Launch()<CR>
-nnoremap <leader>yq :call vimspector#Reset()<CR>
-nnoremap <leader>yr :call vimspector#Restart()<CR>
+" nnoremap <leader>yy :call vimspector#Launch()<CR>
+" nnoremap <leader>yq :call vimspector#Reset()<CR>
+" nnoremap <leader>yr :call vimspector#Restart()<CR>
 
-nnoremap <leader><space> :call vimspector#StepOver()<CR>
-nnoremap <leader>yl :call vimspector#StepInto()<CR>
-nnoremap <leader>yh :call vimspector#StepOut()<CR>
-nnoremap <leader>yc :call vimspector#Continue()<CR>
-nnoremap <leader>. :call vimspector#ToggleBreakpoint()<CR>
-nnoremap <leader>yj :call vimspector#UpFrame()<CR>
-nnoremap <leader>yk :call vimspector#DownFrame()<CR>
+" nnoremap <leader><space> :call vimspector#StepOver()<CR>
+" nnoremap <leader>yl :call vimspector#StepInto()<CR>
+" nnoremap <leader>yh :call vimspector#StepOut()<CR>
+" nnoremap <leader>yc :call vimspector#Continue()<CR>
+" nnoremap <leader>. :call vimspector#ToggleBreakpoint()<CR>
+" nnoremap <leader>yj :call vimspector#UpFrame()<CR>
+" nnoremap <leader>yk :call vimspector#DownFrame()<CR>

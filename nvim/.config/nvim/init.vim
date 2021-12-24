@@ -56,8 +56,11 @@ Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 " Harpoon
 Plug 'ThePrimeagen/harpoon'
 
-" Debugger
-Plug 'puremourning/vimspector'
+" Terminal
+Plug 'voldikss/vim-floaterm'
+
+" Debugger [ uncommit the line-below to plug debugger ]
+" Plug 'puremourning/vimspector'
 
 " Documentation
 Plug 'vimwiki/vimwiki'
@@ -85,6 +88,7 @@ set expandtab
 set nohls
 set signcolumn=yes
 set scrolloff=999
+set cursorline
 
 let g:python3_host_prog='/opt/homebrew/bin/python3'
 let g:vimwiki_list = [{'path': '~/Documents/.vimwiki',
@@ -110,6 +114,7 @@ luafile ~/.config/nvim/lua/telescope-config.lua
 
 source ~/.config/nvim/plugin/starify-config.vim
 source ~/.config/nvim/plugin/airline-config.vim
+source ~/.config/nvim/plugin/floaterm-config.vim
 
 " Keybind & Autocmd
 source ~/.config/nvim/keybind.vim
