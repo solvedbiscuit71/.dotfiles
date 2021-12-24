@@ -6,7 +6,8 @@ local server = {
     'pyright',
     'html',
     'cssls',
-    'tsserver'
+    'tsserver',
+    'tailwindcss'
     -- For more server.. (check https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 }
 
