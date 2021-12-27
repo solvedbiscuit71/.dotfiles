@@ -40,5 +40,14 @@ augroup WIKI
     autocmd!
     autocmd BufEnter * nnoremap <leader>o :!open %<CR><CR>
     autocmd BufEnter *.wiki nnoremap <leader>o :Vimwiki2HTMLBrowse<CR>
+augroup END
+
+" Setting execute/export
+augroup  EXE
+    autocmd!
+    autocmd BufEnter * nnoremap <leader>x :echo "Set a Execute command in autocmd.vim"<CR>
+    autocmd BufEnter *.cpp nnoremap <leader>x :FloatermNew ./%:t:r.out<CR>
+    autocmd BufEnter *.ts nnoremap <leader>x :FloatermNew ts-node %<CR>
+    autocmd BufEnter *.js nnoremap <leader>x :FloatermNew node %<CR>
     autocmd BufEnter *.wiki nnoremap <leader>x :!~/.config/nvim/wiki2pdf/wiki2pdf % ~/Documents/Notes/Add_to/%:t:r.pdf<CR>
 augroup END

@@ -7,4 +7,4 @@ if exists(":CompilerSet") != 2
     command -nargs=* CompilerSet setlocal <args>
 endif
 
-CompilerSet makeprg=clang++\ -g\ %\ -o\ %:p:h/a.out
+CompilerSet makeprg=clang++\ -g\ %\ -o\ ./%:t:r.out
