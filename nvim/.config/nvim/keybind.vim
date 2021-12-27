@@ -111,6 +111,10 @@ nnoremap <leader>; <cmd>lua require("harpoon.ui").nav_file(4)<CR>
 " ================================
 
 tnoremap <silent> <Esc> <C-\><C-n>:FloatermToggle<CR>
+tnoremap   <silent> <C-t> <C-\><C-n>:FloatermNew<CR>
+tnoremap   <silent> <C-n> <C-\><C-n>:FloatermNext<CR>
+tnoremap   <silent> <C-p> <C-\><C-n>:FloatermPrev<CR>
+tnoremap   <silent> <C-e> <C-\><C-n>:FloatermKill<CR>
 nnoremap <silent> <leader>` :FloatermToggle<CR>
 
 " ================================
