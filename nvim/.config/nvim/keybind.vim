@@ -56,8 +56,8 @@ nnoremap <silent> [c :cprev<CR>
 " bufferline
 " ================================
 
-nnoremap <silent> ]b :BufferLineCycleNext<CR>
-nnoremap <silent> [b :BufferLineCyclePrev<CR>
+nnoremap <silent> <C-l> :BufferLineCycleNext<CR>
+nnoremap <silent> <C-h> :BufferLineCyclePrev<CR>
 
 " ================================
 " lsp
