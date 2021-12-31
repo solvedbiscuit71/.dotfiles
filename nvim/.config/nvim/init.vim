@@ -8,8 +8,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'bling/vim-airline'
 Plug 'mkitt/tabline.vim'
-Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
+
+" --------------------------------
+" Removed Startify After (101a02e)
+" --------------------------------
 
 " More operators
 Plug 'tpope/vim-repeat'
@@ -21,11 +24,12 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
-" Note: gitsigns also provides a text objects (ih -> hunk)
+" Note: gitsigns also provides a text objects (ih -> hunk) ( has to be set )
 
 " Git
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 
 " Git worktree
 Plug 'ThePrimeagen/git-worktree.nvim'
@@ -59,8 +63,9 @@ Plug 'ThePrimeagen/harpoon'
 " Terminal
 Plug 'voldikss/vim-floaterm'
 
-" Debugger [ uncommit the line-below to plug debugger ]
-" Plug 'puremourning/vimspector'
+" ----------------------------------------------
+" Removed Debugger Configuration After (101a02e)
+" ----------------------------------------------
 
 " Documentation
 Plug 'vimwiki/vimwiki'
@@ -82,8 +87,8 @@ set number relativenumber
 set hidden
 set path+=**
 set wildmenu
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set nohls
 set signcolumn=yes
@@ -112,7 +117,7 @@ luafile ~/.config/nvim/lua/cmp-config.lua
 luafile ~/.config/nvim/lua/lsp-config.lua
 luafile ~/.config/nvim/lua/telescope-config.lua
 
-source ~/.config/nvim/plugin/starify-config.vim
+" source ~/.config/nvim/plugin/starify-config.vim
 source ~/.config/nvim/plugin/airline-config.vim
 source ~/.config/nvim/plugin/floaterm-config.vim
 

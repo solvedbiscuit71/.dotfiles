@@ -14,7 +14,8 @@ require('gitsigns').setup {
     ['n <leader>hu'] = '<cmd>Gitsigns reset_hunk<CR>',
     ['n <leader>hr'] = '<cmd>Gitsigns undo_stage_hunk<CR>',
 
-    -- Note: their is a custom Text Object provided by gitsigns
-    -- ih -> hunks
+    -- Text objects
+    ['o ih'] = ':<C-U>Gitsigns select_hunk<CR>',
+    ['x ih'] = ':<C-U>Gitsigns select_hunk<CR>'
   },
 }

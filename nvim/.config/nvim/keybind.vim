@@ -33,15 +33,16 @@ nnoremap <leader>I :set ic!<CR>
 " editing
 " ================================
 
-nnoremap <leader>n :Ex<CR>
-nnoremap <leader>q :q!<CR>
-nnoremap <leader>ww :w<CR>
-nnoremap <leader>wq :wq<CR>
-nnoremap <leader>e :wincmd q<CR>
-nnoremap <leader>d :bw<CR>
+nnoremap <silent> <leader>n :Ex<CR>
+nnoremap <silent> <leader>q :q<CR>
+nnoremap <silent> <leader>ww :w<CR>
+nnoremap <silent> <leader>wq :wq<CR>
+nnoremap <silent> <leader>e :wincmd q<CR>
+nnoremap <silent> <leader>d :bw<CR>
 
 nnoremap <leader>b <C-^>
-nnoremap <leader>m :make<CR>
+" Since,<leader>mp -> MarkdownPreviewToggle
+nnoremap <leader>mm :make<CR>
 nnoremap <leader>% :source %<CR>
 
 nnoremap <silent> <leader>t :tabnew<CR>:Ex ~<CR>
@@ -70,7 +71,7 @@ nnoremap <silent> gh <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :G commit<CR>
 nnoremap <leader>gp :G push<CR>
-nnoremap <leader>gl :G log --oneline --graph<CR>
+nnoremap <leader>gl :Flog<CR>
 nnoremap <leader>gu :G restore % <bar> :e!<CR>
 nnoremap <leader>gf :diffget //2<CR>
 nnoremap <leader>gj :diffget //3<CR>
@@ -123,18 +124,4 @@ nnoremap <silent> <leader>` :FloatermToggle<CR>
 
 nnoremap <leader>mp :MarkdownPreviewToggle<CR>
 
-" ================================
-" debugger [ uncommit to use it ]
-" ================================
-
-" nnoremap <leader>yy :call vimspector#Launch()<CR>
-" nnoremap <leader>yq :call vimspector#Reset()<CR>
-" nnoremap <leader>yr :call vimspector#Restart()<CR>
-
-" nnoremap <leader><space> :call vimspector#StepOver()<CR>
-" nnoremap <leader>yl :call vimspector#StepInto()<CR>
-" nnoremap <leader>yh :call vimspector#StepOut()<CR>
-" nnoremap <leader>yc :call vimspector#Continue()<CR>
-" nnoremap <leader>. :call vimspector#ToggleBreakpoint()<CR>
-" nnoremap <leader>yj :call vimspector#UpFrame()<CR>
-" nnoremap <leader>yk :call vimspector#DownFrame()<CR>
+" Removed Debugger Configuration After (101a02e)
