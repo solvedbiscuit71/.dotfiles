@@ -49,20 +49,21 @@ nnoremap <silent> <leader>t :tabnew<CR>:Ex ~<CR>
 nnoremap <silent> <leader>c :tabclose<CR>
 nnoremap <silent> cd :lcd %:p:h<CR>
 
-nnoremap <silent> ]q :cnext<CR>
-nnoremap <silent> [q :cprev<CR>
+nnoremap <silent> ]c :cnext<CR>
+nnoremap <silent> [c :cprev<CR>
+
+" ================================
+" bufferline
+" ================================
+
+nnoremap <silent> ]b :BufferLineCycleNext<CR>
+nnoremap <silent> [b :BufferLineCyclePrev<CR>
 
 " ================================
 " lsp
 " ================================
 
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> R <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> H <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> gh <cmd>lua vim.lsp.buf.code_action()<CR>
+" Check: lua/lsp-config.lua
 
 " ================================
 " git
