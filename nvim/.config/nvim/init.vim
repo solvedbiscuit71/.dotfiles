@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 
 " Theme and Looks
 Plug 'morhetz/gruvbox'
+Plug 'goolord/alpha-nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
@@ -86,5 +88,7 @@ luafile ~/.config/nvim/lua/treesitter-config.lua
 luafile ~/.config/nvim/lua/cmp-config.lua
 luafile ~/.config/nvim/lua/lsp-config.lua
 luafile ~/.config/nvim/lua/telescope-config.lua
+luafile ~/.config/nvim/lua/alpha-config.lua
+luafile ~/.config/nvim/lua/tree-config.lua
 luafile ~/.config/nvim/lua/bufferline-config.lua
 luafile ~/.config/nvim/lua/galaxyline-config.lua

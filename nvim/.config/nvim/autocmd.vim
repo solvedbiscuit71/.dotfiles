@@ -4,11 +4,7 @@ augroup SPACE
     autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 
-" Transparent BG
-augroup BG
-    autocmd!
-    autocmd VimEnter * :highlight Normal ctermbg=NONE guibg=NONE
-augroup END
+" Removed Transparent bg at [87506b8]
 
 " Setting compiler
 augroup COMPILER

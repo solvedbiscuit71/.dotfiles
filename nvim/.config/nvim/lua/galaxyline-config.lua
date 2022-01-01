@@ -3,37 +3,32 @@ local condition = require('galaxyline.condition')
 local default = require('galaxyline.theme').default
 
 local color = {
-  bg = "#1d2021",
+  bg = "#1d1d1d",
   fg = "#504945",
   fg0 = "#fbf1c7",
   red = "#fb4934",
   yellow = "#fabd2f",
   green = "#b8bb26",
-  aqua = "#8ec07c",
+  aqua = "#689d6a",
+  blue = "#458588",
   cyan = "#83a598",
   purple = "#d3869b",
   grey = "#ebdbb2"
 }
 
-section.left[2] ={
-  FileIcon = {
-    provider = 'FileIcon',
-    condition = condition.buffer_not_empty,
-    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,color.bg},
-  },
-}
-
-section.left[3] = {
-  FileName = {
-    provider = {'FileName','FileSize'},
-    condition = condition.buffer_not_empty,
+section.left[1] = {
+  CurrentDir = {
+    provider = function()
+      return vim.fn.fnamemodify(vim.fn.getcwd(),':t')
+    end,
     separator = ' | ',
     separator_highlight = {color.fg,color.bg},
-    highlight = {color.grey,color.bg,'bold'}
+    highlight = {color.blue,color.bg,'bold'}
   }
 }
 
-section.left[4] = {
+
+section.left[2] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = condition.check_git_workspace,
@@ -43,7 +38,7 @@ section.left[4] = {
   }
 }
 
-section.left[5] = {
+section.left[3] = {
   GitIcon = {
     provider = function() return '' end,
     condition = condition.check_git_workspace,
@@ -53,7 +48,7 @@ section.left[5] = {
   }
 }
 
-section.left[6] = {
+section.left[4] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
@@ -61,7 +56,7 @@ section.left[6] = {
     highlight = {color.green,color.bg},
   }
 }
-section.left[7] = {
+section.left[5] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
@@ -69,14 +64,26 @@ section.left[7] = {
     highlight = {color.yellow,color.bg},
   }
 }
-section.left[8] = {
+section.left[6] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
     icon = '  ',
+    separator = '| ',
+    separator_highlight = {color.fg,color.bg},
     highlight = {color.red,color.bg},
   }
 }
+
+section.left[7] = {
+  filePath = {
+    provider = function()
+      return vim.fn.fnamemodify(vim.fn.expand('%'),':~:.')
+    end,
+    highlight = {color.grey,color.bg,'italic'}
+  }
+}
+
 
 
 section.right[1] = {
@@ -112,7 +119,25 @@ section.right[4] = {
   }
 }
 
-section.right[5]= {
+section.right[5] ={
+  FileIcon = {
+    provider = 'FileIcon',
+    condition = condition.buffer_not_empty,
+    separator = '| ',
+    separator_highlight = {color.fg,color.bg},
+    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,color.bg},
+  },
+}
+
+section.right[6] = {
+  BufferType = {
+    provider = 'FileTypeName',
+    condition = condition.buffer_not_empty,
+    highlight = {color.grey,color.bg}
+  }
+}
+
+section.right[7]= {
   FileFormat = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
@@ -121,7 +146,7 @@ section.right[5]= {
     highlight = {color.grey,color.bg,'bold'},
   }
 }
-section.right[6] = {
+section.right[8] = {
   LineInfo = {
     provider = 'LineColumn',
     separator = ' | ',
@@ -129,7 +154,7 @@ section.right[6] = {
     highlight = {color.grey,color.bg},
   },
 }
-section.right[7] = {
+section.right[9] = {
   PerCent = {
     provider = 'LinePercent',
     separator = ' ',
@@ -138,7 +163,7 @@ section.right[7] = {
   }
 }
 
-section.right[8] = {
+section.right[10] = {
   ScrollBar = {
     provider = 'ScrollBar',
     highlight = {color.fg0,color.bg},

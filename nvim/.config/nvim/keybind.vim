@@ -33,7 +33,7 @@ nnoremap <leader>I :set ic!<CR>
 " editing
 " ================================
 
-nnoremap <silent> <leader>n :Ex<CR>
+nnoremap <silent> <leader>n :NvimTreeFocus<CR>
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>ww :w<CR>
 nnoremap <silent> <leader>wq :wq<CR>
