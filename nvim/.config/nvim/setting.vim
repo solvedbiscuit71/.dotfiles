@@ -1,7 +1,14 @@
-" ======================
-" Vim's Configuration
-" ======================
+" =======================================================
+"
+" ███████ ███████ ████████ ████████ ██ ███    ██  ██████
+" ██      ██         ██       ██    ██ ████   ██ ██
+" ███████ █████      ██       ██    ██ ██ ██  ██ ██   ███
+"      ██ ██         ██       ██    ██ ██  ██ ██ ██    ██
+" ███████ ███████    ██       ██    ██ ██   ████  ██████
+"
+" =======================================================
 
+" colorscheme
 colorscheme gruvbox
 
 " set
@@ -35,7 +42,6 @@ let g:floaterm_height = 0.9
 let g:floaterm_wintype = 'float'
 let g:floaterm_position = 'center'
 
-" Nvim-tree
 let g:nvim_tree_quit_on_open = 1
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_respect_buf_cwd = 1
@@ -46,5 +52,5 @@ let g:nvim_tree_show_icons = {
     \ 'folder_arrows': 1,
     \ }
 
-" highlights
-hi FloatermBorder guifg=none
+" highlight
+highlight FloatermBorder guifg=none

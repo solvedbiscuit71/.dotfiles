@@ -1,49 +1,52 @@
-" Remove Trailing Spaces
-augroup SPACE
-    autocmd!
-    autocmd BufWritePre * :%s/\s\+$//e
-augroup END
+"  ============================================================
+"
+"  █████  ██    ██ ████████  ██████   ██████ ███    ███ ██████
+" ██   ██ ██    ██    ██    ██    ██ ██      ████  ████ ██   ██
+" ███████ ██    ██    ██    ██    ██ ██      ██ ████ ██ ██   ██
+" ██   ██ ██    ██    ██    ██    ██ ██      ██  ██  ██ ██   ██
+" ██   ██  ██████     ██     ██████   ██████ ██      ██ ██████
+"
+" =============================================================
 
-" Removed Transparent bg at [87506b8]
+" BufWrite
+aug RemoveSpaces
+  au!
+  au BufWritePre * :%s/\s\+$//e
+aug END
 
-" Setting compiler
-augroup COMPILER
-    autocmd!
-    autocmd BufEnter *.cpp :compiler clang
-    autocmd BufEnter *.ts :compiler tsc
-augroup END
+aug ReloadSnippets
+  au!
+  au BufWritePost *.snippets :CmpUltisnipsReloadSnippets
+aug END
 
-" Setting SpellChecker
-augroup SPELL
-    autocmd!
-    autocmd BufEnter *.md,*.wiki :setlocal spell spelllang=en_us
-augroup END
+" BufEnter
+aug SetCompiler
+  au!
+  au BufEnter *.cpp :compiler clang
+  au BufEnter *.ts :compiler tsc
+aug END
 
-" Commentary
-augroup COMMENT
-    autocmd!
-    autocmd BufEnter *.cpp :setlocal commentstring=//\ %s
-augroup END
+aug EnableSpell
+  au!
+  au BufEnter *.md,*.wiki :setlocal spell spelllang=en_us
+aug END
 
-" UltiSnips
-augroup SNIP
-    autocmd!
-    autocmd BufWritePost *.snippets :CmpUltisnipsReloadSnippets
-augroup END
+aug SetCommets
+  au!
+  au BufEnter *.cpp :setlocal commentstring=//\ %s
+aug END
 
-" VimWiki
-augroup WIKI
-    autocmd!
-    autocmd BufEnter * nnoremap <leader>o :!open %<CR><CR>
-    autocmd BufEnter *.wiki nnoremap <leader>o :Vimwiki2HTMLBrowse<CR>
-augroup END
+aug OpenCommand
+  au!
+  au BufEnter * nnoremap <leader>o :!open %<CR><CR>
+  au BufEnter *.wiki nnoremap <leader>o :Vimwiki2HTMLBrowse<CR>
+aug END
 
-" Setting execute/export
-augroup  EXE
-    autocmd!
-    autocmd BufEnter * nnoremap <leader>x :echo "Set a Execute command in autocmd.vim"<CR>
-    autocmd BufEnter *.cpp nnoremap <leader>x :FloatermNew ./%:t:r.out<CR>
-    autocmd BufEnter *.ts nnoremap <leader>x :FloatermNew ts-node %<CR>
-    autocmd BufEnter *.js nnoremap <leader>x :FloatermNew node %<CR>
-    autocmd BufEnter *.wiki nnoremap <leader>x :!~/.config/nvim/wiki2pdf/wiki2pdf % ~/Documents/Notes/Add_to/%:t:r.pdf<CR>
-augroup END
+aug ExecuteCommand
+  au!
+  au BufEnter * nnoremap <leader>x :echo "Set a Execute command in autocmd.vim"<CR>
+  au BufEnter *.cpp nnoremap <leader>x :FloatermNew ./%:t:r.out<CR>
+  au BufEnter *.ts nnoremap <leader>x :FloatermNew ts-node %<CR>
+  au BufEnter *.js nnoremap <leader>x :FloatermNew node %<CR>
+  au BufEnter *.wiki nnoremap <leader>x :!~/.config/nvim/wiki2pdf/wiki2pdf % ~/Documents/Notes/Add_to/%:t:r.pdf<CR>
+aug END
