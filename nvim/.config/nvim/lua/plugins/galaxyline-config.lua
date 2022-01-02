@@ -5,7 +5,7 @@ local default = require('galaxyline.theme').default
 local color = {
   bg = "#1d1d1d",
   fg = "#504945",
-  fg0 = "#fbf1c7",
+  fg0 = "#d5c4a1",
   red = "#fb4934",
   orange = "#fe8019",
   yellow = "#fabd2f",
@@ -30,7 +30,9 @@ section.left[2] = {
       local mode_color = {n = color.purple, i = color.green,v=color.yellow,
                           [''] = color.yellow,V=color.yellow,
                           c = color.red,no = color.red,s = color.orange,
-                          S=color.orange,[''] = color.orange}
+                          S=color.orange,[''] = color.orange,
+                          t=color.cyan,
+                        }
       vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
       return vim.fn.fnamemodify(vim.fn.getcwd(),':t')
     end,

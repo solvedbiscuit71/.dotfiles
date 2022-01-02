@@ -1,47 +1,55 @@
-"  ============================================================
-"
-"  █████  ██    ██ ████████  ██████   ██████ ███    ███ ██████
-" ██   ██ ██    ██    ██    ██    ██ ██      ████  ████ ██   ██
-" ███████ ██    ██    ██    ██    ██ ██      ██ ████ ██ ██   ██
-" ██   ██ ██    ██    ██    ██    ██ ██      ██  ██  ██ ██   ██
-" ██   ██  ██████     ██     ██████   ██████ ██      ██ ██████
-"
-" =============================================================
-
-" BufWrite
+-- Remove Trailing Spaces
+vim.cmd[[
 aug RemoveSpaces
   au!
   au BufWritePre * :%s/\s\+$//e
 aug END
+]]
 
+-- Reloading Snippets after Editing
+vim.cmd[[
 aug ReloadSnippets
   au!
   au BufWritePost *.snippets :CmpUltisnipsReloadSnippets
 aug END
+]]
 
-" BufEnter
+-- Set compiler
+vim.cmd[[
 aug SetCompiler
   au!
   au BufEnter *.cpp :compiler clang
   au BufEnter *.ts :compiler tsc
 aug END
+]]
 
+-- Enable spell
+vim.cmd[[
 aug EnableSpell
   au!
   au BufEnter *.md,*.wiki :setlocal spell spelllang=en_us
 aug END
+]]
 
+-- Set comment string
+vim.cmd[[
 aug SetCommets
   au!
   au BufEnter *.cpp :setlocal commentstring=//\ %s
 aug END
+]]
 
+-- Set <leader>o
+vim.cmd[[
 aug OpenCommand
   au!
   au BufEnter * nnoremap <leader>o :!open %<CR><CR>
   au BufEnter *.wiki nnoremap <leader>o :Vimwiki2HTMLBrowse<CR>
 aug END
+]]
 
+-- Set <leader>x
+vim.cmd[[
 aug ExecuteCommand
   au!
   au BufEnter * nnoremap <leader>x :echo "Set a Execute command in autocmd.vim"<CR>
@@ -50,3 +58,4 @@ aug ExecuteCommand
   au BufEnter *.js nnoremap <leader>x :FloatermNew node %<CR>
   au BufEnter *.wiki nnoremap <leader>x :!~/.config/nvim/wiki2pdf/wiki2pdf % ~/Documents/Notes/Add_to/%:t:r.pdf<CR>
 aug END
+]]

@@ -1,3 +1,7 @@
+function getcwd()
+  return vim.fn.fnamemodify(vim.fn.getcwd(),':t')
+end
+
 require("bufferline").setup{
   options = {
     -- icons
@@ -8,18 +12,14 @@ require("bufferline").setup{
     left_trunc_marker = '',
     right_trunc_marker = '',
 
+    -- offset
+    offsets = {{filetype = "NvimTree", text = getcwd , text_align = "center"}},
+
     -- show
     show_buffer_icons = true,
     show_buffer_close_icons = false,
     show_close_icon = false,
     show_tab_indicators = true,
     separator_style = "thin",
-
-    -- diagnostics
-    diagnostics = "nvim_lsp",
-    diagnostics_update_in_insert = false,
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      return "("..count..")"
-    end,
   }
 }
