@@ -7,6 +7,7 @@ local color = {
   fg = "#504945",
   fg0 = "#fbf1c7",
   red = "#fb4934",
+  orange = "#fe8019",
   yellow = "#fabd2f",
   green = "#b8bb26",
   aqua = "#689d6a",
@@ -17,18 +18,29 @@ local color = {
 }
 
 section.left[1] = {
-  CurrentDir = {
+  RainbowRed = {
+    provider = function() return '▊' end,
+    highlight = {color.bg,color.bg}
+  },
+}
+
+section.left[2] = {
+  ViMode = {
     provider = function()
+      local mode_color = {n = color.purple, i = color.green,v=color.yellow,
+                          [''] = color.yellow,V=color.yellow,
+                          c = color.red,no = color.red,s = color.orange,
+                          S=color.orange,[''] = color.orange}
+      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
       return vim.fn.fnamemodify(vim.fn.getcwd(),':t')
     end,
-    separator = ' | ',
+    separator = '  ',
     separator_highlight = {color.fg,color.bg},
     highlight = {color.blue,color.bg,'bold'}
   }
 }
 
-
-section.left[2] = {
+section.left[3] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = condition.check_git_workspace,
@@ -38,7 +50,7 @@ section.left[2] = {
   }
 }
 
-section.left[3] = {
+section.left[4] = {
   GitIcon = {
     provider = function() return '' end,
     condition = condition.check_git_workspace,
@@ -48,7 +60,7 @@ section.left[3] = {
   }
 }
 
-section.left[4] = {
+section.left[5] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
@@ -56,7 +68,8 @@ section.left[4] = {
     highlight = {color.green,color.bg},
   }
 }
-section.left[5] = {
+
+section.left[6] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
@@ -64,18 +77,30 @@ section.left[5] = {
     highlight = {color.yellow,color.bg},
   }
 }
-section.left[6] = {
+
+section.left[7] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
     icon = '  ',
-    separator = '| ',
-    separator_highlight = {color.fg,color.bg},
     highlight = {color.red,color.bg},
   }
 }
 
-section.left[7] = {
+section.left[8] = {
+  Sep = {
+    provider = function()
+      return ''
+    end,
+    condition = condition.check_git_workspace,
+    separator = '  ',
+    separator_highlight = {color.fg,color.bg},
+    highlight = {color.bg,color.bg}
+  }
+}
+
+
+section.left[9] = {
   filePath = {
     provider = function()
       return vim.fn.fnamemodify(vim.fn.expand('%'),':~:.')
@@ -123,7 +148,7 @@ section.right[5] ={
   FileIcon = {
     provider = 'FileIcon',
     condition = condition.buffer_not_empty,
-    separator = '| ',
+    separator = ' ',
     separator_highlight = {color.fg,color.bg},
     highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,color.bg},
   },
@@ -141,7 +166,7 @@ section.right[7]= {
   FileFormat = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
-    separator = ' |',
+    separator = ' ',
     separator_highlight = {color.fg,color.bg},
     highlight = {color.grey,color.bg,'bold'},
   }
@@ -149,7 +174,7 @@ section.right[7]= {
 section.right[8] = {
   LineInfo = {
     provider = 'LineColumn',
-    separator = ' | ',
+    separator = ' ',
     separator_highlight = {color.fg,color.bg},
     highlight = {color.grey,color.bg},
   },
