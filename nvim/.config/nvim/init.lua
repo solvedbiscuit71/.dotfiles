@@ -23,6 +23,8 @@ let.vimwiki_list = {
   {
     path = '~/Documents/.vimwiki',
     path_html = '~/Documents/.vimwiki_html',
+    syntax = 'markdown',
+    ext = '.md',
   }
 }
 

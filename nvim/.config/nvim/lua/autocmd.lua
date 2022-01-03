@@ -27,7 +27,7 @@ aug END
 vim.cmd[[
 aug EnableSpell
   au!
-  au BufEnter *.md,*.wiki :setlocal spell spelllang=en_us
+  au BufEnter *.md :setlocal spell spelllang=en_us
 aug END
 ]]
 
@@ -36,15 +36,6 @@ vim.cmd[[
 aug SetCommets
   au!
   au BufEnter *.cpp :setlocal commentstring=//\ %s
-aug END
-]]
-
--- Set <leader>o
-vim.cmd[[
-aug OpenCommand
-  au!
-  au BufEnter * nnoremap <leader>o :!open %<CR><CR>
-  au BufEnter *.wiki nnoremap <leader>o :Vimwiki2HTMLBrowse<CR>
 aug END
 ]]
 
