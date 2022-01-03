@@ -1,13 +1,12 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
 require'nvim-tree'.setup {
-  disable_netrw       = false,
-  hijack_netrw        = false,
-  auto_close          = true,
+  hijack_cursor = true,
+  auto_close          = false,
   update_cwd          = true,
   update_to_buf_dir   = {
-    enable = true,
-    auto_open = true,
+    enable = false,
+    auto_open = false,
   },
   filters = {
     dotfiles = false,
@@ -29,7 +28,7 @@ require'nvim-tree'.setup {
     mappings = {
       custom_only = false,
       list = {
-        { key = {"cd"},cb = tree_cb("cd") },
+        { key = {"."},cb = tree_cb("cd") },
       }
     },
   }
