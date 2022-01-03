@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Theme and Looks
-  use 'morhetz/gruvbox'
+  use 'lifepillar/vim-gruvbox8'
   use 'goolord/alpha-nvim'
   use 'kyazdani42/nvim-tree.lua'
   use 'akinsho/bufferline.nvim'

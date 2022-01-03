@@ -1,9 +1,6 @@
 -- importing plugins
 require'plugin'
 
--- colorscheme
-vim.cmd[[colorscheme gruvbox]]
-
 -- set
 local set = vim.opt
 
@@ -51,8 +48,11 @@ let.nvim_tree_show_icons = {
   folder_arrows = 1,
 }
 
+-- colorscheme
+vim.cmd[[colorscheme gruvbox8_hard]]
+
 -- highlights
-vim.cmd[[highlight FloatermBorder guifg=none]]
+vim.cmd[[highlight FloatermBorder guifg=none guibg=none]]
 
 -- autocmd
 require'autocmd'

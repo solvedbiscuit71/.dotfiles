@@ -17,13 +17,6 @@ local color = {
   grey = "#ebdbb2"
 }
 
-section.left[1] = {
-  RainbowRed = {
-    provider = function() return '▊' end,
-    highlight = {color.bg,color.bg}
-  },
-}
-
 section.left[2] = {
   ViMode = {
     provider = function()
