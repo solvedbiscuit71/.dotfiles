@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'vim-scripts/ReplaceWithRegister'
   use 'alvan/vim-closetag'
+  use 'jiangmiao/auto-pairs'
 
   -- Custom Text-Object
   use 'kana/vim-textobj-user'

@@ -47,6 +47,7 @@ aug ExecuteCommand
   au BufEnter *.cpp nnoremap <leader>x :FloatermNew ./%:t:r.out<CR>
   au BufEnter *.ts nnoremap <leader>x :FloatermNew ts-node %<CR>
   au BufEnter *.js nnoremap <leader>x :FloatermNew node %<CR>
+  au BufEnter *.py nnoremap <leader>x : FloatermNew python3 %<CR>
   au BufEnter *.wiki nnoremap <leader>x :!~/.config/nvim/wiki2pdf/wiki2pdf % ~/Documents/Notes/Add_to/%:t:r.pdf<CR>
 aug END
 ]]
