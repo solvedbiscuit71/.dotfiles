@@ -58,7 +58,7 @@ fi
 alias vim="nvim"
 
 # Vim Wiki
-alias wiki="vim ~/Documents/.vimwiki/index.wiki"
+alias wiki="vim ~/Documents/.vimwiki/index.md"
 
 # Git Aliases
 alias gs="git status"
@@ -68,10 +68,7 @@ alias gp="git push"
 alias gu="git restore ."
 
 # Deleting all .out & .out.dSYM files created by clang++
-alias da="find ./ -name '*.out' -delete | find ./ -name '*.out.dSYM' -exec rm -R {} \;"
+alias rmOut="find ./ -name '*.out' -delete | find ./ -name '*.out.dSYM' -exec rm -R {} \;"
 
 # Alias to edit dotfiles
 alias rc="vim ~/.zshrc"
-
-# Alias tsc
-alias ts="tsc --outFile output.js --target es6"
