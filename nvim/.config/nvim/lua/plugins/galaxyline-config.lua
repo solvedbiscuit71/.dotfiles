@@ -1,6 +1,5 @@
 local section = require('galaxyline').section
 local condition = require('galaxyline.condition')
-local default = require('galaxyline.theme').default
 
 local color = {
   bg = "#1d1d1d",
@@ -17,7 +16,10 @@ local color = {
   grey = "#ebdbb2"
 }
 
-section.left[2] = {
+local custom_icon = require('galaxyline.provider_fileinfo').define_file_icon()
+custom_icon['NvimTree'] = { color.green , 'פּ' }
+
+section.left[1] = {
   ViMode = {
     provider = function()
       local mode_color = {n = color.purple, i = color.green,v=color.yellow,
@@ -35,7 +37,7 @@ section.left[2] = {
   }
 }
 
-section.left[3] = {
+section.left[2] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = condition.check_git_workspace,
@@ -45,7 +47,7 @@ section.left[3] = {
   }
 }
 
-section.left[4] = {
+section.left[3] = {
   GitIcon = {
     provider = function() return '' end,
     condition = condition.check_git_workspace,
@@ -55,7 +57,7 @@ section.left[4] = {
   }
 }
 
-section.left[5] = {
+section.left[4] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
@@ -64,7 +66,7 @@ section.left[5] = {
   }
 }
 
-section.left[6] = {
+section.left[5] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
@@ -73,7 +75,7 @@ section.left[6] = {
   }
 }
 
-section.left[7] = {
+section.left[6] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
@@ -82,21 +84,21 @@ section.left[7] = {
   }
 }
 
-section.left[8] = {
-  Sep = {
+section.left[7] = {
+  Seperator = {
     provider = function()
       return ''
     end,
     condition = condition.check_git_workspace,
-    separator = '  ',
+    separator = ' ',
     separator_highlight = {color.fg,color.bg},
     highlight = {color.bg,color.bg}
   }
 }
 
 
-section.left[9] = {
-  filePath = {
+section.left[8] = {
+  FilePath = {
     provider = function()
       return vim.fn.fnamemodify(vim.fn.expand('%'),':~:.')
     end,
@@ -110,6 +112,7 @@ section.right[1] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = '  ',
+    condition = condition.hide_in_width,
     separator = ' ',
     separator_highlight = {'NONE',color.bg},
     highlight = {color.red,color.bg}
@@ -119,6 +122,7 @@ section.right[2] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
+    condition = condition.hide_in_width,
     highlight = {color.yellow,color.bg},
   }
 }
@@ -127,6 +131,7 @@ section.right[3] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = '  ',
+    condition = condition.hide_in_width,
     highlight = {color.cyan,color.bg},
   }
 }
@@ -135,12 +140,13 @@ section.right[4] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',
+    condition = condition.hide_in_width,
     highlight = {color.purple,color.bg},
   }
 }
 
 section.right[5] ={
-  FileIcon = {
+  BufferIcon = {
     provider = 'FileIcon',
     condition = condition.buffer_not_empty,
     separator = ' ',
@@ -169,21 +175,13 @@ section.right[7]= {
 section.right[8] = {
   LineInfo = {
     provider = 'LineColumn',
-    separator = ' ',
+    separator = '  ',
     separator_highlight = {color.fg,color.bg},
     highlight = {color.grey,color.bg},
   },
 }
-section.right[9] = {
-  PerCent = {
-    provider = 'LinePercent',
-    separator = ' ',
-    separator_highlight = {'NONE',color.bg},
-    highlight = {color.grey,color.bg},
-  }
-}
 
-section.right[10] = {
+section.right[9] = {
   ScrollBar = {
     provider = 'ScrollBar',
     highlight = {color.fg0,color.bg},

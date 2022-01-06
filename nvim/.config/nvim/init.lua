@@ -10,6 +10,7 @@ set.wildmenu = true
 set.tabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
+set.showmode = false
 set.hls = false
 set.termguicolors = true
 set.signcolumn = "yes"
