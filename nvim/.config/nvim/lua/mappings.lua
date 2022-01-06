@@ -60,6 +60,7 @@ map('n','<leader>k','<cmd>lua require("harpoon.ui").nav_file(2)<CR>')
 map('n','<leader>l','<cmd>lua require("harpoon.ui").nav_file(3)<CR>')
 
 -- floaterm
+map('t','<C-\\>','<C-\\><C-n>')
 map('t','<Esc>','<C-\\><C-n>:FloatermToggle<CR>')
 map('t','<C-t>','<C-\\><C-n>:FloatermNew<CR>')
 map('t','<C-n>','<C-\\><C-n>:FloatermNext<CR>')
