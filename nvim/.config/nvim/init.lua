@@ -50,6 +50,9 @@ let.nvim_tree_show_icons = {
   folder_arrows = 1,
 }
 
+let.mkdp_page_title = '-- ${name} --'
+let.mkdp_filetypes = { 'markdown' }
+
 -- colorscheme
 vim.cmd[[colorscheme gruvbox8_hard]]
 

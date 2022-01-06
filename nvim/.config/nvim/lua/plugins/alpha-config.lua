@@ -28,9 +28,8 @@ dashboard.section.header.val = {
 -- Set menu
 dashboard.section.buttons.val = {
   button( "e", "  > New file" , ":ene <BAR> startinsert <CR>"),
-  button( "f", "  > Find file", ":lua require('telescope.builtin').find_files({prompt_title = '< CWD >'})<CR>"),
-  button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
-  button( "s", "  > Settings" , ":lua require('telescope.builtin').find_files({prompt_title = '< VIM >',cwd = '~/.config/nvim',})<CR>"),
+  button( "SPC f f", "  > Find file"),
+  button( "SPC f n", "  > Settings"),
   button( "q", "  > Quit NVIM", ":q!<CR>"),
 }
 
