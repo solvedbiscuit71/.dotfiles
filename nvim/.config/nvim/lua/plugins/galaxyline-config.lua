@@ -2,12 +2,12 @@ local section = require('galaxyline').section
 local condition = require('galaxyline.condition')
 
 local color = {
-  bg = "#1d1d1d",
+  bg = "#0f1112",
   fg = "#504945",
-  fg0 = "#d5c4a1",
   red = "#fb4934",
   orange = "#fe8019",
   yellow = "#fabd2f",
+  lightyellow = "#ffffe0",
   green = "#b8bb26",
   aqua = "#689d6a",
   blue = "#458588",
@@ -18,6 +18,9 @@ local color = {
 
 local custom_icon = require('galaxyline.provider_fileinfo').define_file_icon()
 custom_icon['NvimTree'] = { color.green , 'פּ' }
+custom_icon['netrw'] = { color.green , 'פּ' }
+custom_icon['fugitive'] = { color.orange , '' }
+custom_icon['floggraph'] = { color.orange , '' }
 
 section.left[1] = {
   ViMode = {
@@ -184,6 +187,6 @@ section.right[8] = {
 section.right[9] = {
   ScrollBar = {
     provider = 'ScrollBar',
-    highlight = {color.fg0,color.bg},
+    highlight = {color.lightyellow,color.bg},
   }
 }
