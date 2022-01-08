@@ -54,10 +54,7 @@ fi
 # Aliases
 # -------------
 
-# Neovim Aliases
-alias vim="nvim"
-
-# Vim Wiki
+# VimWiki
 alias wiki="vim ~/Documents/.vimwiki/index.md"
 
 # Git Aliases
@@ -69,6 +66,3 @@ alias gu="git restore ."
 
 # Deleting all .out & .out.dSYM files created by clang++
 alias rmOut="find ./ -name '*.out' -delete | find ./ -name '*.out.dSYM' -exec rm -R {} \;"
-
-# Alias to edit dotfiles
-alias rc="vim ~/.zshrc"
