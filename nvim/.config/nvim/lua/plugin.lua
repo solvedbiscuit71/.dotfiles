@@ -32,6 +32,7 @@ return require('packer').startup(function()
     use 'vim-scripts/ReplaceWithRegister'
 
     -- Auto Close
+    use 'jiangmiao/auto-pairs'
     use 'alvan/vim-closetag'
 
     -- Telescope
