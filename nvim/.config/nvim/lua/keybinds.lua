@@ -24,6 +24,9 @@ map('n','cd',':lcd %:p:h<CR>')
 map('n','<C-l>',':BufferLineCycleNext<CR>')
 map('n','<C-h>',':BufferLineCyclePrev<CR>')
 
+map('i','<C-j>','<ESC>:lua require("luasnip").expand_or_jump()<CR>')
+map('s','<C-j>','<ESC>:lua require("luasnip").expand_or_jump()<CR>')
+
 -- git
 map('n','<leader>gs',':G<CR>')
 map('n','<leader>gu',':G restore %<CR>')
