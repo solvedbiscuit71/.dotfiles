@@ -5,7 +5,7 @@ local map = require("utils").map
 vim.g.mapleader = ' '
 
 -- general
-map('n','<leader>n',':Lex %:p:h<CR>:wincmd h<CR>')
+map('n','<leader>n',':NvimTreeToggle<CR>')
 
 map('n','<leader>q',':qa<CR>')
 map('n','<leader>e',':wincmd q<CR>')

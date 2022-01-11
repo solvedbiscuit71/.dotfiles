@@ -18,9 +18,15 @@ local let = vim.g
 
 let.python3_host_prog='/opt/homebrew/bin/python3'
 
-let.netrw_banner = 0
-let.netrw_winsize = 18 
-let.netrw_browse_split = 0
+let.nvim_tree_quit_on_open = 1
+let.nvim_tree_indent_markers = 1
+let.nvim_tree_respect_buf_cwd = 1
+let.nvim_tree_show_icons = {
+    git = 0,
+    folders = 1,
+    files = 1,
+    folder_arrows = 1,
+}
 
 let.vimwiki_list = {
   {

@@ -4,7 +4,9 @@ require('bufferline').setup {
         offsets = {
             {
                 filetype = "NvimTree", 
-                text = "File Explorer", 
+                text = function()
+                    return vim.fn.fnamemodify(vim.fn.getcwd(),':t')
+                end,
                 highlight = "Directory",
                 text_align = "center"
             },

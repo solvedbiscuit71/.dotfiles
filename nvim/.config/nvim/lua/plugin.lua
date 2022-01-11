@@ -7,6 +7,7 @@ return require('packer').startup(function()
     use 'lifepillar/vim-gruvbox8'
     use 'nvim-lualine/lualine.nvim'
     use 'akinsho/bufferline.nvim'
+    use 'kyazdani42/nvim-tree.lua'
 
     -- Icon
     use 'ryanoasis/vim-devicons'

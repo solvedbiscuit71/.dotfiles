@@ -2,7 +2,9 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'gruvbox-material',
-    disabled_filetypes = {},
+    disabled_filetypes = {
+        "NvimTree",
+    },
     always_divide_middle = true,
   },
   sections = {
