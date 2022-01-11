@@ -4,6 +4,10 @@ local map = require("utils").map
 -- set leader = <SPC>
 vim.g.mapleader = ' '
 
+-- mutating jumplist
+map('n','k','(v:count > 5 ? "m\'" . v:count : "") . \'k\'',{ expr = true })
+map('n','j','(v:count > 5 ? "m\'" . v:count : "") . \'j\'',{ expr = true })
+
 -- general
 map('n','<leader>n',':NvimTreeToggle<CR>')
 
@@ -17,9 +21,6 @@ map('n','<leader>b','<C-^>')
 map('n','<leader>`',':FloatermToggle<CR>')
 
 map('n','cd',':lcd %:p:h<CR>')
-map('n','<C-k>',':wincmd k<CR>')
-map('n','<C-l>',':wincmd l<CR>')
-
 map('n','<C-l>',':BufferLineCycleNext<CR>')
 map('n','<C-h>',':BufferLineCyclePrev<CR>')
 
