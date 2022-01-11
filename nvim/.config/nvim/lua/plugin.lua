@@ -6,7 +6,7 @@ return require('packer').startup(function()
     -- ColorScheme
     use 'lifepillar/vim-gruvbox8'
     use 'nvim-lualine/lualine.nvim'
-    -- use 'itchyny/lightline.vim'
+    use 'akinsho/bufferline.nvim'
 
     -- Icon
     use 'ryanoasis/vim-devicons'

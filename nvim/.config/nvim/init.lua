@@ -17,9 +17,6 @@ set.termguicolors = true
 local let = vim.g
 
 let.python3_host_prog='/opt/homebrew/bin/python3'
--- let.lightline = {
---     ['colorscheme'] = 'seoul256',
--- }
 
 let.netrw_banner = 0
 let.netrw_winsize = 18 

@@ -17,10 +17,11 @@ map('n','<leader>b','<C-^>')
 map('n','<leader>`',':FloatermToggle<CR>')
 
 map('n','cd',':lcd %:p:h<CR>')
-map('n','<C-h>',':wincmd h<CR>')
-map('n','<C-j>',':wincmd j<CR>')
 map('n','<C-k>',':wincmd k<CR>')
 map('n','<C-l>',':wincmd l<CR>')
+
+map('n','<C-l>',':BufferLineCycleNext<CR>')
+map('n','<C-h>',':BufferLineCyclePrev<CR>')
 
 -- git
 map('n','<leader>gs',':G<CR>')
