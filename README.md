@@ -105,8 +105,8 @@ brew install neovim
 +python3 support is essential for plugins like UltiSnips,vimspector,.
 
 ```sh
-brew install python
-pip install neovim
+brew install python3
+pip3 install neovim
 ```
 
 ## Stow
