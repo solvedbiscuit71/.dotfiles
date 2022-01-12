@@ -54,6 +54,9 @@ fi
 # Aliases
 # -------------
 
+# ls alternate
+alias l="exa -la"
+
 # VimWiki
 alias wiki="vim ~/Documents/.vimwiki/index.md"
 
