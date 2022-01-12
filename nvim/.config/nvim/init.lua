@@ -21,6 +21,7 @@ let.python3_host_prog='/opt/homebrew/bin/python3'
 let.nvim_tree_quit_on_open = 1
 let.nvim_tree_indent_markers = 1
 let.nvim_tree_respect_buf_cwd = 1
+let.nvim_tree_root_folder_modifier = ':~:t'
 let.nvim_tree_show_icons = {
     git = 0,
     folders = 1,

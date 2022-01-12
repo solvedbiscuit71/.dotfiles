@@ -4,9 +4,7 @@ require('bufferline').setup {
         offsets = {
             {
                 filetype = "NvimTree", 
-                text = function()
-                    return vim.fn.fnamemodify(vim.fn.getcwd(),':t')
-                end,
+                text = "LuaTree",
                 highlight = "Directory",
                 text_align = "center"
             },
