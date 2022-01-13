@@ -1,33 +1,27 @@
-#!/usr/bin/env zsh
+#! /bin/zsh
 # Add the path to config files
 
-backup=~/.dotfiles_backup/
+backup="$HOME/.dotfiles_backup/"
 Dir=(
-    ~/.config/nvim \
-    ~/.config/kitty \
-    ~/.cache/alacritty \
-    ~/bg.png \
-    ~/.zshrc \
-    ~/.vimrc \
-    ~/.tmux.conf
+    "$HOME/.config/nvim" 
+    "$HOME/.config/kitty" 
+    "$HOME/.cache/alacritty" 
+    "$HOME/bg.png" 
+    "$HOME/.zshrc" 
+    "$HOME/.vimrc"
+    "$HOME/.tmux.conf"
 )
 
 # Checking for backup dir
-if [ ! -d $backup ]
-then
+if [ ! -e $backup ]; then
     mkdir $backup
-    echo "Creating:$backup" >> $backup/dotfiles.log
 fi
 
 # Moving dir & files
-for i in ${Dir[@]}; do
-    if [ -d $i ]
-    then
-        echo "Moving $i to $backup${i:t:r}" >> $backup/dotfiles.log
+for i in $Dir; do
+    if [ -d $i ]; then
         mv $i $backup${i:t:r}
-    elif [ -f $i ]
-    then
-        echo "Moving $i to $backup${i:t}" >> $backup/dotfiles.log
+    elif [ -f $i ]; then
         mv $i $backup${i:t}
     fi
 done
