@@ -34,8 +34,8 @@ cmp.setup {
     },
 
     sources = {
-        { name = "nvim_lsp", max_item_count = 20 },
-        { name = "luasnip", max_item_count = 10 },
+        { name = "luasnip", max_item_count = 5 },
+        { name = "nvim_lsp", max_item_count = 10 },
         { name = "buffer" },
         { name = "path" },
     },
@@ -44,11 +44,10 @@ cmp.setup {
         format = lspkind.cmp_format {
           with_text = true,
           menu = {
-            luasnips = "[Snip]",
-            nvim_lua = "[Lua]",
-            nvim_lsp = "[Lsp]",
-            path = "[Path]",
-            buffer = "[Buf]",
+            luasnip = "  ",
+            nvim_lsp = "  ",
+            buffer = " ﬘ ",
+            path = " פּ ",
           },
         },
     },
