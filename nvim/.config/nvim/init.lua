@@ -70,3 +70,8 @@ require'autocmds'
 
 -- Plugin Configuration
 require'plugin-config'
+
+-- Loading Snippets
+-- Note: this is an private repo for my snippets collection.
+-- commit the line below to avoid "module mysnippets not found" error.
+require'mysnippets'
