@@ -41,6 +41,7 @@ map('n','<leader>gw',':lua require("telescope").extensions.git_worktree.git_work
 -- telescope
 map('n','<leader>ff',':lua require("telescope.builtin").find_files({prompt_title = "<  >"})<CR>')
 map('n','<leader>fn',':lua require("telescope.builtin").find_files({prompt_title = "< 漣>",cwd = "~/.config/nvim",})<CR>')
+map('n','<leader>fs',':lua require("telescope.builtin").find_files({prompt_title = "<  >",cwd = "~/.config/nvim/lua/mysnippets/",})<CR>')
 
 -- floaterm
 map('t','<C-\\>','<C-\\><C-n>')
