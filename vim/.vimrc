@@ -18,9 +18,22 @@ set timeoutlen=1000 ttimeoutlen=0
 set wildmenu
 syntax on
 
+" Netrw
 let g:netrw_keepdir = 0
 let g:netrw_winsize = 18 
 let g:netrw_banner = 0
+
+function! NetrwMapping()
+    nmap <buffer> h -
+    nmap <buffer> l <CR>
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+" Other options
 let g:vimwiki_list = [{'path': '~/Documents/.vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 let g:lightline = { 'colorscheme': 'apprentice' }
 
@@ -54,7 +67,7 @@ colorscheme gruvbox8_hard
 let g:mapleader = ' '
 
 nnoremap <silent> <leader>n :Lexplore %:p:h<CR>:wincmd h<CR>
-nnoremap <silent> <leader>fn :e ~/.vimrc<CR>
+nnoremap <silent> <leader>fn :tabnew<CR>:e ~/.vimrc<CR>
 
 nnoremap <silent> <leader>q :qa<CR>
 nnoremap <silent> <leader>d :bd<CR>
