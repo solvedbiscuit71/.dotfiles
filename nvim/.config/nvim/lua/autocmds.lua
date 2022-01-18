@@ -11,12 +11,12 @@ local autocmds = {
 
     set_compile_keybind = {
         { 'BufEnter','*','nnoremap <leader>mk :echo "Set a Compiler command in autocmds.lua"<CR>' },
-        { 'BufEnter','*.cpp','nnoremap <leader>mk :!clang++ -g % -o %:p:h/a.out<CR>' },
+        { 'BufEnter','*.cpp','nnoremap <leader>mk :e<CR>:!clang++ -g % -o %:p:h/a.out<CR><CR>' },
     };
 
     set_execute_keybind = {
         { 'BufEnter','*','nnoremap <leader>x :echo "Set a Execute command in autocmds.lua"<CR>' },
-        { 'BufEnter','*.cpp','nnoremap <leader>x :FloatermNew %:p:h/a.out<CR>' },
+        { 'BufEnter','*.cpp','nnoremap <silent> <leader>x :FloatermNew %:p:h/a.out<CR>' },
     };
 }
 
