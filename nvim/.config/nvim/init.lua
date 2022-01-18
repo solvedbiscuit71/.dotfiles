@@ -16,8 +16,6 @@ set.termguicolors = true
 -- let
 local let = vim.g
 
-let.python3_host_prog='/opt/homebrew/bin/python3'
-
 let.nvim_tree_quit_on_open = 1
 let.nvim_tree_indent_markers = 1
 let.nvim_tree_respect_buf_cwd = 1
