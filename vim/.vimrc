@@ -19,23 +19,21 @@ set wildmenu
 syntax on
 
 " Netrw
-let g:netrw_keepdir = 0
-let g:netrw_winsize = 18 
-let g:netrw_banner = 0
-
 function! NetrwMapping()
     nmap <buffer> h -
     nmap <buffer> l <CR>
+
+    nmap <buffer> a %
+    nmap <buffer> dd D
+    vmap <buffer> d D
 endfunction
+
+let g:netrw_banner = 0
 
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
 augroup END
-
-" Other options
-let g:vimwiki_list = [{'path': '~/Documents/.vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-let g:lightline = { 'colorscheme': 'apprentice' }
 
 " Plugin
 call plug#begin('~/.vim/plugged')
@@ -60,13 +58,17 @@ call plug#begin('~/.vim/plugged')
     Plug 'vimwiki/vimwiki'
 call plug#end()
 
+" Plugin Configuration
+let g:vimwiki_list = [{'path': '~/Documents/.vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:lightline = { 'colorscheme': 'apprentice' }
+
 " Set ColorScheme
 colorscheme gruvbox8_hard
 
 " Set Mappings
 let g:mapleader = ' '
 
-nnoremap <silent> <leader>n :Lexplore %:p:h<CR>:wincmd h<CR>
+nnoremap <silent> <leader>n :Ex<CR>
 nnoremap <silent> <leader>fn :tabnew<CR>:e ~/.vimrc<CR>
 
 nnoremap <silent> <leader>q :qa<CR>
