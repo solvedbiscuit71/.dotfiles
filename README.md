@@ -50,7 +50,7 @@ For more info: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/o
 ### Patched Font
 
 Patched fonts includes many symbol which are used by other terminal program.
-Here, we are going to install __Hack Nerd Font__.
+Here, we are going to install __Hack Nerd Font Mono__.
 
 ```sh
 brew tap homebrew/cask-fonts
