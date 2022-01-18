@@ -1,5 +1,5 @@
 # Importing oh-my-zsh
-export ZSH="/Users/praveenperumal/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
 export TERM="xterm-256color"
