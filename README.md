@@ -109,6 +109,9 @@ brew install python3
 pip3 install neovim
 ```
 
+__Note__:  
+comment the line `require'mysnippets'` in `init.lua` to avoid **module not found** error.
+
 ## Stow
 
 Stow is a __symlink manager__ which is used to manager the dotfiles via creating symlink in there respected locations.
