@@ -1,6 +1,7 @@
 " Settings
 filetype plugin on
 set background=dark
+set backspace=indent,eol,start
 set cursorline
 set expandtab
 set hidden
@@ -11,6 +12,7 @@ set nohls
 set noshowmode
 set noswapfile
 set number relativenumber
+set smartindent
 set shiftwidth=4
 set tabstop=4
 set termguicolors
