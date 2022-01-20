@@ -1,0 +1,10 @@
+#! /bin/zsh
+
+# Chmod the mode of the folder/file
+# And then remove it.
+
+for folder in $*
+do
+    chmod -R 744 $folder
+    rm -R $folder
+done
