@@ -56,6 +56,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'kana/vim-textobj-indent'
     Plug 'kana/vim-textobj-entire'
 
+    " autopair
+    Plug 'solvedbiscuit71/vim-autopair'
+
     " Documentation
     Plug 'vimwiki/vimwiki'
 call plug#end()
