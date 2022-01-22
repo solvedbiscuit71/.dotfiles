@@ -36,12 +36,6 @@ let.vimwiki_list = {
   }
 }
 
-let.closetag_filenames = '*.html,*.jsx,*.tsx'
-let.closetag_regions =  {
-  ['typescript.tsx'] = 'jsxRegion,tsxRegion',
-  ['javascript.jsx'] = 'jsxRegion'
-}
-
 let.floaterm_title = " Terminal [$1/$2] "
 let.floaterm_width = 0.9
 let.floaterm_height = 0.9

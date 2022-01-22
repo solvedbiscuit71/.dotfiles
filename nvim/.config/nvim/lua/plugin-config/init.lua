@@ -8,5 +8,5 @@ require'plugin-config.lualine'
 require'plugin-config.bufferline'
 require'plugin-config.luatree'
 
--- Uncomment the below line to install all the TS modules
--- require'plugin-config.treesitter'
+-- comment the below line to disable TreeSitter highlights
+require'plugin-config.treesitter'

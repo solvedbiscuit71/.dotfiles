@@ -33,7 +33,6 @@ return require('packer').startup(function()
 
     -- Auto Close
     use 'solvedbiscuit71/vim-autopair'
-    use 'alvan/vim-closetag'
 
     -- Telescope
     use 'nvim-telescope/telescope.nvim'
