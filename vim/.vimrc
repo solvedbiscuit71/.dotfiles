@@ -13,6 +13,7 @@ set noshowmode
 set noswapfile
 set number relativenumber
 set smartindent
+set smarttab
 set shiftwidth=4
 set tabstop=4
 set termguicolors
@@ -56,7 +57,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kana/vim-textobj-indent'
     Plug 'kana/vim-textobj-entire'
 
-    " autopair
+    " AutoPair
     Plug 'solvedbiscuit71/vim-autopair'
 
     " Documentation
