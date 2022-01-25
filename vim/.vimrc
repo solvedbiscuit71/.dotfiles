@@ -60,6 +60,9 @@ call plug#begin('~/.vim/plugged')
     " AutoPair
     Plug 'solvedbiscuit71/vim-autopair'
 
+    " Fugitive
+    Plug 'tpope/vim-fugitive'
+
     " Documentation
     Plug 'vimwiki/vimwiki'
 call plug#end()
@@ -88,6 +91,9 @@ nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>
 nnoremap <silent> <C-l> :wincmd l<CR>
+
+nnoremap <silent> <leader>gs :G<CR>
+nnoremap <silent> <leader>gp :G push<CR>
 
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
