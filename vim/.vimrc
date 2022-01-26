@@ -12,6 +12,7 @@ set nohls
 set noshowmode
 set noswapfile
 set number relativenumber
+set scrolloff=5
 set smartindent
 set smarttab
 set shiftwidth=4
