@@ -75,7 +75,7 @@ alias gp="git push"
 alias gu="git restore ."
 
 # Deleting all .out & .out.dSYM files created by clang++
-alias rmOut="fd -e out -x rm && fd -e dSYM -x rm -R"
+alias rmOut="fd --hidden --no-ignore -e out -x rm && fd -e dSYM -x rm -R"
 
 # -------------
 # Bookmarks
