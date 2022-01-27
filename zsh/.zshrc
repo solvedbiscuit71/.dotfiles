@@ -72,7 +72,7 @@ alias gs="git status"
 alias gc="git commit"
 alias gl="git log --oneline --graph"
 alias gp="git push"
-alias gu="git restore ."
+alias gu="git restore"
 
 # Deleting all .out & .out.dSYM files created by clang++
 alias rmOut="fd --hidden --no-ignore -e out -x rm && fd -e dSYM -x rm -R"
