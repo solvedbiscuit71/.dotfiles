@@ -11,7 +11,7 @@ local autocmds = {
 
     set_compile_keybind = {
         { 'BufEnter','*','nnoremap <leader>mk :echo "Set a Compiler command in autocmds.lua"<CR>' },
-        { 'BufEnter','*.cpp','nnoremap <leader>mk :e<CR>:!clang++ -g % -o %:p:h/a.out<CR><CR>' },
+        { 'BufEnter','*.cpp','nnoremap <leader>mk :e<CR>:!clang++ -std=c++17 -g % -o %:p:h/a.out<CR><CR>' },
     };
 
     set_execute_keybind = {
