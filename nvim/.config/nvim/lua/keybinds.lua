@@ -21,9 +21,6 @@ map('n','<leader>b','<C-^>')
 map('n','<leader>`',':FloatermToggle<CR>')
 
 map('n','cd',':lcd %:p:h<CR>')
-map('n','<C-l>',':BufferLineCycleNext<CR>')
-map('n','<C-h>',':BufferLineCyclePrev<CR>')
-
 map('i','<C-j>','<ESC>:lua require("luasnip").expand_or_jump()<CR>')
 map('s','<C-j>','<ESC>:lua require("luasnip").expand_or_jump()<CR>')
 
@@ -47,9 +44,8 @@ map('n','<leader>fs',':lua require("telescope.builtin").find_files({prompt_title
 map('t','<C-\\>','<C-\\><C-n>')
 map('t','<Esc>','<C-\\><C-n>:FloatermToggle<CR>')
 map('t','<C-t>','<C-\\><C-n>:FloatermNew<CR>')
-map('t','<C-n>','<C-\\><C-n>:FloatermNext<CR>')
-map('t','<C-p>','<C-\\><C-n>:FloatermPrev<CR>')
-map('t','<C-e>','<C-\\><C-n>:FloatermKill<CR>')
+map('t','<C-l>','<C-\\><C-n>:FloatermNext<CR>')
+map('t','<C-h>','<C-\\><C-n>:FloatermPrev<CR>')
 
 -- harpoon
 map('n','<leader>a',':lua require("harpoon.mark").add_file()<CR>')
