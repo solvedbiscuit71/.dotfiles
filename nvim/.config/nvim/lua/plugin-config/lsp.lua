@@ -17,7 +17,7 @@ end
 
 -- default settings
 local servers = {
-    -- added the server-name here
+    'tsserver',
     -- check https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 }
 
