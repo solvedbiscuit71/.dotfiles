@@ -6,54 +6,54 @@ lspkind.init()
 local cmp = require "cmp"
 
 cmp.setup {
-    snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
-    },
+  snippet = {
+    expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+    end,
+  },
 
-    mapping = {
-        ['<Tab>'] = cmp.mapping({
-            i = cmp.mapping.confirm({ select = true }),
-            c = cmp.mapping.confirm({ select = false }),
-        }),
-        ['<C-n>'] = function(fallback)
-            if cmp.visible() then
-                cmp.select_next_item()
-            else
-                fallback()
-            end
-        end,
-        ['<C-p>'] = function(fallback)
-            if cmp.visible() then
-                cmp.select_prev_item()
-            else
-                fallback()
-            end
-        end,
-    },
+  mapping = {
+    ['<Tab>'] = cmp.mapping({
+        i = cmp.mapping.confirm({ select = true }),
+        c = cmp.mapping.confirm({ select = false }),
+    }),
+    ['<C-n>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
+    ['<C-p>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
+  },
 
-    sources = {
-        { name = "luasnip", max_item_count = 5 },
-        { name = "nvim_lsp", max_item_count = 10 },
-        { name = "buffer" },
-        { name = "path" },
-    },
+  sources = {
+    { name = "luasnip", max_item_count = 5 },
+    { name = "nvim_lsp", max_item_count = 10 },
+    { name = "buffer" },
+    { name = "path" },
+  },
 
-    formatting = {
-        format = lspkind.cmp_format {
-          with_text = true,
-          menu = {
-            luasnip = "  ",
-            nvim_lsp = "  ",
-            buffer = " ﬘ ",
-            path = " פּ ",
-          },
-        },
+  formatting = {
+    format = lspkind.cmp_format {
+      with_text = true,
+      menu = {
+        luasnip = "  ",
+        nvim_lsp = "  ",
+        buffer = " ﬘ ",
+        path = " פּ ",
+      },
     },
+  },
 
-    experimental = {
-        native_menu = false,
-        ghost_text = true,
-    },
+  experimental = {
+    native_menu = false,
+    ghost_text = true,
+  },
 }

@@ -7,10 +7,10 @@ set.hls = false
 set.number = true
 set.relativenumber = true
 set.scrolloff = 5
-set.shiftwidth = 4
+set.shiftwidth = 2
 set.showmode = false
 set.signcolumn = "yes"
-set.tabstop = 4
+set.tabstop = 2
 set.termguicolors = true
 
 -- let
@@ -21,10 +21,10 @@ let.nvim_tree_indent_markers = 1
 let.nvim_tree_respect_buf_cwd = 1
 let.nvim_tree_root_folder_modifier = ':~:t'
 let.nvim_tree_show_icons = {
-    git = 0,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
+  git = 0,
+  folders = 1,
+  files = 1,
+  folder_arrows = 1,
 }
 
 let.vimwiki_list = {
