@@ -15,8 +15,8 @@ set number relativenumber
 set scrolloff=5
 set smartindent
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set termguicolors
 set timeoutlen=1000 ttimeoutlen=0
 set wildmenu
@@ -24,48 +24,48 @@ syntax on
 
 " Netrw
 function! NetrwMapping()
-    nmap <buffer> h -
-    nmap <buffer> l <CR>
+  nmap <buffer> h -
+  nmap <buffer> l <CR>
 
-    nmap <buffer> a %
-    nmap <buffer> dd D
-    vmap <buffer> d D
+  nmap <buffer> a %
+  nmap <buffer> dd D
+  vmap <buffer> d D
 endfunction
 
 let g:netrw_banner = 0
 
 augroup netrw_mapping
-  autocmd!
-  autocmd filetype netrw call NetrwMapping()
+autocmd!
+autocmd filetype netrw call NetrwMapping()
 augroup END
 
 " Plugin
 call plug#begin('~/.vim/plugged')
-    " ColorScheme
-    Plug 'lifepillar/vim-gruvbox8'
-    Plug 'itchyny/lightline.vim'
-    Plug 'ryanoasis/vim-devicons'
+  " ColorScheme
+  Plug 'lifepillar/vim-gruvbox8'
+  Plug 'itchyny/lightline.vim'
+  Plug 'ryanoasis/vim-devicons'
 
-    " Opertor
-    Plug 'tpope/vim-repeat'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-surround'
+  " Opertor
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
 
-    " TextObject
-    Plug 'vim-scripts/ReplaceWithRegister'
-    Plug 'kana/vim-textobj-user'
-    Plug 'kana/vim-textobj-line'
-    Plug 'kana/vim-textobj-indent'
-    Plug 'kana/vim-textobj-entire'
+  " TextObject
+  Plug 'vim-scripts/ReplaceWithRegister'
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-line'
+  Plug 'kana/vim-textobj-indent'
+  Plug 'kana/vim-textobj-entire'
 
-    " AutoPair
-    Plug 'solvedbiscuit71/vim-autopair'
+  " AutoPair
+  Plug 'solvedbiscuit71/vim-autopair'
 
-    " Fugitive
-    Plug 'tpope/vim-fugitive'
+  " Fugitive
+  Plug 'tpope/vim-fugitive'
 
-    " Documentation
-    Plug 'vimwiki/vimwiki'
+  " Documentation
+  Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Plugin Configuration
