@@ -1,5 +1,5 @@
-" Settings
-filetype plugin on
+" Vim-Setting
+syntax on
 set background=dark
 set backspace=indent,eol,start
 set cursorline
@@ -20,81 +20,40 @@ set tabstop=2
 set termguicolors
 set timeoutlen=1000 ttimeoutlen=0
 set wildmenu
-syntax on
 
-" Netrw
-function! NetrwMapping()
-  nmap <buffer> h -
-  nmap <buffer> l <CR>
+" Vim-Plug-Setting
+let g:lightline = { 'colorscheme': 'apprentice' }
+let g:NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden=1
 
-  nmap <buffer> a %
-  nmap <buffer> dd D
-  vmap <buffer> d D
-endfunction
-
-let g:netrw_banner = 0
-
-augroup netrw_mapping
-autocmd!
-autocmd filetype netrw call NetrwMapping()
-augroup END
-
-" Plugin
+" Vim-Plug
 call plug#begin('~/.vim/plugged')
-  " ColorScheme
-  Plug 'lifepillar/vim-gruvbox8'
   Plug 'itchyny/lightline.vim'
-  Plug 'ryanoasis/vim-devicons'
 
-  " Opertor
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
-
-  " TextObject
-  Plug 'vim-scripts/ReplaceWithRegister'
-  Plug 'kana/vim-textobj-user'
-  Plug 'kana/vim-textobj-line'
-  Plug 'kana/vim-textobj-indent'
   Plug 'kana/vim-textobj-entire'
+  Plug 'kana/vim-textobj-indent'
+  Plug 'kana/vim-textobj-line'
+  Plug 'kana/vim-textobj-user'
 
-  " AutoPair
+  Plug 'preservim/nerdtree'
+
+  Plug 'lifepillar/vim-gruvbox8'
+  Plug 'ryanoasis/vim-devicons'
   Plug 'solvedbiscuit71/vim-autopair'
-
-  " Fugitive
-  Plug 'tpope/vim-fugitive'
-
-  " Documentation
-  Plug 'vimwiki/vimwiki'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
-" Plugin Configuration
-let g:vimwiki_list = [{'path': '~/Documents/.vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-let g:lightline = { 'colorscheme': 'apprentice' }
-
-" Set ColorScheme
+" Vim-colorscheme
 colorscheme gruvbox8_hard
 
-" Set Mappings
+" Vim-Keymaps
 let g:mapleader = ' '
 
-nnoremap <silent> <leader>n :Ex<CR>
-nnoremap <silent> <leader>fn :tabnew<CR>:e ~/.vimrc<CR>
-
-nnoremap <silent> <leader>q :qa<CR>
-nnoremap <silent> <leader>d :bd<CR>
-nnoremap <silent> <leader>e :wincmd q<CR>
-nnoremap <silent> <leader>c :tabclose<CR>
-nnoremap <silent> <leader>t :tabnew<CR>
-
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <leader>b <C-^>
-nnoremap <silent> <C-h> :wincmd h<CR>
-nnoremap <silent> <C-j> :wincmd j<CR>
-nnoremap <silent> <C-k> :wincmd k<CR>
-nnoremap <silent> <C-l> :wincmd l<CR>
-
-nnoremap <silent> <leader>gs :G<CR>
-nnoremap <silent> <leader>gp :G push<CR>
-
+nnoremap <silent> <leader>d :bd<CR>
+nnoremap <silent> <leader>q :qa<CR>
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
