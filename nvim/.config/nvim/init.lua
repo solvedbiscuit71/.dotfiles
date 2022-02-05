@@ -1,4 +1,4 @@
--- set
+-- neovim setting
 local set = vim.opt
 
 set.cursorline = true
@@ -13,7 +13,7 @@ set.signcolumn = "yes"
 set.tabstop = 2
 set.termguicolors = true
 
--- let
+-- neovim plugin setting
 local let = vim.g
 
 let.nvim_tree_quit_on_open = 1
@@ -37,33 +37,23 @@ let.vimwiki_list = {
 }
 
 let.floaterm_title = " Terminal [$1/$2] "
-let.floaterm_width = 0.9
-let.floaterm_height = 0.9
+let.floaterm_width = 0.6
+let.floaterm_height = 0.8
 let.floaterm_wintype = 'float'
 let.floaterm_position = 'center'
 
-let.mkdp_page_title = '${name}'
-let.mkdp_filetypes = { 'markdown' }
+-- neovim plugins
+require("plugins")
 
--- Loading Plugins
-require'plugin'
+-- neovim plugin configuration
+require("plugin-config")
 
--- colorscheme
+-- neovim colorscheme
 vim.cmd[[colorscheme gruvbox8_hard]]
-
--- highlights
 vim.cmd[[highlight FloatermBorder guifg=none guibg=none]]
 
--- keybinds
-require'keybinds'
+-- neovim keymaps
+require("keymaps")
 
--- autocmds
-require'autocmds'
-
--- Plugin Configuration
-require'plugin-config'
-
--- Loading Snippets
--- Note: this is an private repo for my snippets collection.
--- commit the line below to avoid "module mysnippets not found" error.
-require'mysnippets'
+-- neovim autocmds
+require("autocmds")

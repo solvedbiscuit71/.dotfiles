@@ -8,7 +8,7 @@ function M.map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-function M.nvim_create_augroups(definitions)
+function M.nvim_create_autocmds(definitions)
     for group_name, definition in pairs(definitions) do
         vim.api.nvim_command('augroup '..group_name)
         vim.api.nvim_command('autocmd!')
