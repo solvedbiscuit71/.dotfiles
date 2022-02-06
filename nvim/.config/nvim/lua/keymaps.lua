@@ -30,6 +30,7 @@ map('n','<leader>fw',':lua require("telescope").extensions.git_worktree.git_work
 -- terimal
 map('n','<C-k>',':FloatermToggle<CR>')
 map('t','<C-k>','<C-\\><C-n>:FloatermToggle<CR>')
+map('t','<Esc>','<C-\\><C-n>')
 map('t','<C-t>','<C-\\><C-n>:FloatermNew<CR>')
 map('t','<C-h>','<C-\\><C-n>:FloatermNext<CR>')
 map('t','<C-l>','<C-\\><C-n>:FloatermPrev<CR>')
