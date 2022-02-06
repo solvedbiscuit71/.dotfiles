@@ -51,9 +51,7 @@ colorscheme gruvbox8_hard
 " Vim-Keymaps
 let g:mapleader = ' '
 
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <leader>b <C-^>
-nnoremap <silent> <leader>d :bd<CR>
-nnoremap <silent> <leader>q :qa<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-j> <C-^>
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
