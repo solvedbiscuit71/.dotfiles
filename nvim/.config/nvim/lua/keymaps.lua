@@ -3,14 +3,23 @@ local map = require("utils").map
 vim.g.mapleader = ' '
 
 -- basics
-map('n','<leader>b','<C-^>')
-map('n','<leader>d',':bw<CR>')
-map('n','<leader>q',':qa<CR>')
+map('n','<C-j>','<C-^>')
 map('n','cd',':lcd %:h<CR>')
 
--- luatree & fugitive
-map('n','<leader>g',':G<CR>')
-map('n','<leader>n',':NvimTreeToggle<CR>')
+-- bufferline
+map('n','<C-l>',':BufferLineCycleNext<CR>')
+map('n','<C-h>',':BufferLineCyclePrev<CR>')
+
+-- luatree
+map('n','<C-n>',':NvimTreeToggle<CR>')
+map('n','<leader>nn',':NvimTreeToggle<CR>')
+map('n','<leader>nf',':NvimTreeFindFileToggle<CR>')
+
+-- fugitive
+map('n','<C-g>',':G<CR>')
+map('n','<leader>gg',':G<CR>')
+map('n','<leader>gl',':G log --oneline<CR>')
+map('n','<leader>gp',':G push<CR>')
 
 -- telescope
 map('n','<C-f>',':lua require("telescope.builtin").find_files({prompt_title = "<  >"})<CR>')
@@ -19,8 +28,8 @@ map('n','<leader>fn',':lua require("telescope.builtin").find_files({prompt_title
 map('n','<leader>fw',':lua require("telescope").extensions.git_worktree.git_worktrees()<CR>')
 
 -- terimal
-map('n','<leader>`',':FloatermToggle<CR>')
-map('t','<Esc>','<C-\\><C-n>:FloatermToggle<CR>')
+map('n','<C-k>',':FloatermToggle<CR>')
+map('t','<C-k>','<C-\\><C-n>:FloatermToggle<CR>')
 map('t','<C-t>','<C-\\><C-n>:FloatermNew<CR>')
 map('t','<C-h>','<C-\\><C-n>:FloatermNext<CR>')
 map('t','<C-l>','<C-\\><C-n>:FloatermPrev<CR>')
