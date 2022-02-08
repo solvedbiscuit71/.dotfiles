@@ -57,3 +57,7 @@ require("keymaps")
 
 -- neovim autocmds
 require("autocmds")
+
+-- luasnips
+-- commit the line below if you don't want to require the 'snippets' directory
+require("snippets")
