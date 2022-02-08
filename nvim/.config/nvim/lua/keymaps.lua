@@ -3,8 +3,9 @@ local map = require("utils").map
 vim.g.mapleader = ' '
 
 -- basics
-map('n','<C-j>','<C-^>')
 map('n','cd',':lcd %:h<CR>')
+map('n','<C-j>','<C-^>')
+map('n','<C-e>',':bd<CR>')
 
 -- bufferline
 map('n','<C-l>',':BufferLineCycleNext<CR>')
@@ -14,6 +15,11 @@ map('n','<C-h>',':BufferLineCyclePrev<CR>')
 map('n','<C-n>',':NvimTreeToggle<CR>')
 map('n','<leader>nn',':NvimTreeToggle<CR>')
 map('n','<leader>nf',':NvimTreeFindFileToggle<CR>')
+
+-- luasnips ( for auto-completion & snippets )
+-- NOTE: for emment-vim use '<C-y>n'
+map('i','<C-j>','<ESC>:lua require("luasnip").expand_or_jump()<CR>')
+map('s','<C-j>','<ESC>:lua require("luasnip").expand_or_jump()<CR>')
 
 -- fugitive
 map('n','<C-g>',':G<CR>')
