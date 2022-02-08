@@ -41,6 +41,7 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind-nvim'
+  use 'mattn/emmet-vim'
 
   -- snippets
   use 'L3MON4D3/LuaSnip'
