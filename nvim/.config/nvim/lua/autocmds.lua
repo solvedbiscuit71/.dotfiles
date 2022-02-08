@@ -12,7 +12,8 @@ local autocmds = {
 
   set_execute_keybind = {
     { 'BufEnter','*','nnoremap <leader>x :echo "Set a Execute command in autocmds.lua"<CR>' },
-    { 'BufEnter','*.html','nnoremap <silent> <buffer> <leader>x :!open %<CR>' },
+    { 'BufEnter','*.html','nnoremap <silent> <buffer> <leader>x :!open %<CR><CR>' },
+    { 'BufEnter','*.png,*.jpg','nnoremap <silent> <buffer> <leader>x :!open %<CR><CR>' },
     { 'BufEnter','*.js','nnoremap <silent> <buffer> <leader>x :FloatermNew node %<CR>' },
     { 'BufEnter','*.ts','nnoremap <silent> <buffer> <leader>x :FloatermNew ts-node %<CR>' },
   }
