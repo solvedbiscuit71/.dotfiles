@@ -21,10 +21,14 @@ end
 -- npm i -g typescript typescript-language-server
 -- ```
 local servers = {
+  -- web development
   'html',
   'cssls',
   'tsserver',
-  'jsonls'
+  'jsonls',
+
+  -- ai & machine learning
+  'pyright'
 }
 
 for key,value in ipairs(servers) do
