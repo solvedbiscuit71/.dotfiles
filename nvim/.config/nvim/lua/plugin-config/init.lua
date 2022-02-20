@@ -1,4 +1,3 @@
-require("plugin-config.bufferline")
 require("plugin-config.cmp")
 require("plugin-config.lsp")
 require("plugin-config.lualine")

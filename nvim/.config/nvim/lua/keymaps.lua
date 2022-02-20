@@ -4,12 +4,11 @@ vim.g.mapleader = ' '
 
 -- basics
 map('n','cd',':lcd %:h<CR>')
-map('n','<C-j>','<C-^>')
-map('n','<C-e>',':bd<CR>')
+map('n','<C-d>',':bd<CR>')
 
--- bufferline
-map('n','<C-l>',':BufferLineCycleNext<CR>')
-map('n','<C-h>',':BufferLineCyclePrev<CR>')
+map('n','<C-b>','<C-^>')
+map('n','<C-j>','<C-d>',{ noremap = true })
+map('n','<C-k>','<C-u>',{ noremap = true })
 
 -- luatree
 map('n','<C-n>',':NvimTreeToggle<CR>')
@@ -34,10 +33,11 @@ map('n','<leader>fn',':lua require("telescope.builtin").find_files({prompt_title
 map('n','<leader>fw',':lua require("telescope").extensions.git_worktree.git_worktrees()<CR>')
 
 -- terimal
-map('n','<C-k>',':FloatermToggle<CR>')
-map('t','<C-k>','<C-\\><C-n>:FloatermToggle<CR>')
+map('n','<C-\\>',':FloatermToggle<CR>')
+map('t','<C-\\>','<C-\\><C-n>:FloatermToggle<CR>')
 map('t','<Esc>','<C-\\><C-n>')
 map('t','<C-t>','<C-\\><C-n>:FloatermNew<CR>')
+map('t','<C-d>','<C-\\><C-n>:FloatermKill<CR>')
 map('t','<C-h>','<C-\\><C-n>:FloatermNext<CR>')
 map('t','<C-l>','<C-\\><C-n>:FloatermPrev<CR>')
 

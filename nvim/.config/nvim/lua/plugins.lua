@@ -9,7 +9,6 @@ return require('packer').startup(function()
   use 'lifepillar/vim-gruvbox8'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-tree.lua'
-  use 'akinsho/bufferline.nvim'
 
   -- icon
   use 'ryanoasis/vim-devicons'
@@ -49,7 +48,6 @@ return require('packer').startup(function()
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'digitaltoad/vim-pug'
 
   -- telescope
   use 'nvim-lua/plenary.nvim'
