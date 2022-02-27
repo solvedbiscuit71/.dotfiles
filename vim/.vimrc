@@ -12,7 +12,7 @@ set nohls
 set noshowmode
 set noswapfile
 set number relativenumber
-set scrolloff=5
+set scrolloff=10
 set smartindent
 set smarttab
 set shiftwidth=2
@@ -51,7 +51,14 @@ colorscheme gruvbox8_hard
 " Vim-Keymaps
 let g:mapleader = ' '
 
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
-nnoremap <silent> <C-j> <C-^>
+nnoremap <silent> <C-n> :NERDTree<CR>
+nnoremap <silent> <C-b> <C-^>
+
+nnoremap <silent> <C-d> :bd<CR>
+nnoremap <silent> <C-j> <C-d>
+nnoremap <silent> <C-k> <C-u>
+vnoremap <silent> <C-j> <C-d>
+vnoremap <silent> <C-k> <C-u>
+
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'

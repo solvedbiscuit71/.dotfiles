@@ -9,11 +9,14 @@ map('n','<C-d>',':bd<CR>')
 map('n','<C-b>','<C-^>')
 map('n','<C-j>','<C-d>',{ noremap = true })
 map('n','<C-k>','<C-u>',{ noremap = true })
+map('v','<C-j>','<C-d>',{ noremap = true })
+map('v','<C-k>','<C-u>',{ noremap = true })
+
 
 -- luatree
-map('n','<C-n>',':NvimTreeToggle<CR>')
-map('n','<leader>nn',':NvimTreeToggle<CR>')
-map('n','<leader>nf',':NvimTreeFindFileToggle<CR>')
+map('n','<C-n>',':NvimTreeOpen<CR>')
+map('n','<leader>nn',':NvimTreeOpen<CR>')
+map('n','<leader>nf',':NvimTreeFindFile<CR>')
 
 -- luasnips ( for auto-completion & snippets )
 -- NOTE: for emment-vim use '<C-y>n'
