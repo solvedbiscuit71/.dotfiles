@@ -26,6 +26,13 @@ require'nvim-tree'.setup {
     ignore = false,
   },
 
+  -- actions
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
+  },
+
   -- additional
   update_cwd = true,
   hijack_cursor = true,

@@ -12,6 +12,8 @@ map('n','<C-k>','<C-u>',{ noremap = true })
 map('v','<C-j>','<C-d>',{ noremap = true })
 map('v','<C-k>','<C-u>',{ noremap = true })
 
+-- npm run!
+map('n','<leader>npm',':FloatermNew npm run ',{ silent = false })
 
 -- luatree
 map('n','<C-n>',':NvimTreeOpen<CR>')
