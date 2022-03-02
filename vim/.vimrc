@@ -28,21 +28,22 @@ let NERDTreeShowHidden=1
 
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
+  Plug 'preservim/nerdtree'
   Plug 'itchyny/lightline.vim'
+
+  Plug 'lifepillar/vim-gruvbox8'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'solvedbiscuit71/vim-autopair'
 
   Plug 'kana/vim-textobj-entire'
   Plug 'kana/vim-textobj-indent'
   Plug 'kana/vim-textobj-line'
   Plug 'kana/vim-textobj-user'
 
-  Plug 'preservim/nerdtree'
-
-  Plug 'lifepillar/vim-gruvbox8'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'solvedbiscuit71/vim-autopair'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
+  Plug 'vim-scripts/ReplaceWithRegister'
 call plug#end()
 
 " Vim-colorscheme
