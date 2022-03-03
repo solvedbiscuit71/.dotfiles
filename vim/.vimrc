@@ -52,6 +52,7 @@ colorscheme gruvbox8_hard
 " Vim-Keymaps
 let g:mapleader = ' '
 
+nnoremap <silent> cd :lcd %:h<CR>
 nnoremap <silent> <C-n> :NERDTree<CR>
 nnoremap <silent> <C-b> <C-^>
 
@@ -60,6 +61,14 @@ nnoremap <silent> <C-j> <C-d>
 nnoremap <silent> <C-k> <C-u>
 vnoremap <silent> <C-j> <C-d>
 vnoremap <silent> <C-k> <C-u>
+
+nnoremap <silent> <C-t> :tabnew<CR>
+nnoremap <silent> <leader>tc :tabnew<CR>:lcd ~/Code/<CR>
+nnoremap <silent> <leader>td :tabnew<CR>:lcd ~/.dotfiles/<CR>
+
+nnoremap <silent> <C-c> :tabclose<CR>
+nnoremap <silent> <C-h> :tabprevious<CR>
+nnoremap <silent> <C-l> :tabnext<CR>
 
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
