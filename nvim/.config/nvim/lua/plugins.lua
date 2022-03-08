@@ -7,6 +7,7 @@ return require('packer').startup(function()
 
   -- colorscheme
   use 'lifepillar/vim-gruvbox8'
+  use 'chrisbra/Colorizer'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-tree.lua'
 

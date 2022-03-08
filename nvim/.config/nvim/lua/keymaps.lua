@@ -61,6 +61,9 @@ map('t','<C-c>','<C-\\><C-n>:FloatermKill<CR>')
 map('t','<C-h>','<C-\\><C-n>:FloatermNext<CR>')
 map('t','<C-l>','<C-\\><C-n>:FloatermPrev<CR>')
 
+-- color code toggle
+map('n','<leader>ct',':ColorToggle<CR>')
+
 -- markdown preview
 map('n','<leader>mp',':MarkdownPreviewToggle<CR>')
 
