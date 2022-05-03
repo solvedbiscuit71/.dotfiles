@@ -19,16 +19,14 @@ end
 -- ```
 -- npm i -g vscode-langservers-extracted
 -- npm i -g typescript typescript-language-server
+-- npm install -g svelte-language-server
 -- ```
 local servers = {
-  -- web development
   'html',
   'cssls',
   'tsserver',
   'jsonls',
-
-  -- ai & machine learning
-  'pyright'
+  'svelte'
 }
 
 for key,value in ipairs(servers) do

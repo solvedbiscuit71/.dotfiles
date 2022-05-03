@@ -7,28 +7,7 @@ map('n','cd',':lcd %:h<CR>')
 map('n','<C-d>',':bd<CR>')
 map('n','<C-c>',':tabclose<CR>')
 
-map('n','<C-h>',':tabprevious<CR>')
-map('n','<C-l>',':tabnext<CR>')
-map('i','<C-h>','<ESC>:tabprevious<CR>')
-map('i','<C-l>','<ESC>:tabnext<CR>')
-
 map('n','<C-b>','<C-^>')
-map('n','<C-j>','<C-d>',{ noremap = true })
-map('n','<C-k>','<C-u>',{ noremap = true })
-map('v','<C-j>','<C-d>',{ noremap = true })
-map('v','<C-k>','<C-u>',{ noremap = true })
-
--- tabs
-map('n','<C-t>',':tabnew<CR>')
-map('n','<leader>tt',':tabnew<CR>')
-map('n','<leader>tc',':tabnew<CR>:lcd ~/Code/<CR>')
-map('n','<leader>td',':tabnew<CR>:lcd ~/.dotfiles/<CR>')
-
--- npm (node package manager)
-map('n','<leader>npm',':FloatermNew npm run ',{ silent = false })
-
-map('n','<leader>rs',':FloatermNew sass -w src/sass:public/css<CR><C-\\><C-n>:FloatermHide<CR>:echo "sass watching src/sass/**/*.{scss,sass}"<CR>')
-map('n','<leader>bs',':FloatermNew lite-server -c bs-config.json<CR><C-\\><C-n>:FloatermHide<CR>:echo "lite-server running"<CR>')
 
 -- luatree
 map('n','<C-n>',':NvimTreeOpen<CR>')
