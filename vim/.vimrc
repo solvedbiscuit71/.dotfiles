@@ -23,12 +23,9 @@ set wildmenu
 
 " Vim-Plug-Setting
 let g:lightline = { 'colorscheme': 'apprentice' }
-let g:NERDTreeQuitOnOpen = 1
-let NERDTreeShowHidden=1
 
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
-  Plug 'preservim/nerdtree'
   Plug 'itchyny/lightline.vim'
 
   Plug 'lifepillar/vim-gruvbox8'
@@ -53,14 +50,8 @@ colorscheme gruvbox8_hard
 let g:mapleader = ' '
 
 nnoremap <silent> cd :lcd %:h<CR>
-nnoremap <silent> <C-n> :NERDTree<CR>
+nnoremap <silent> <C-n> :Ex<CR>
 nnoremap <silent> <C-b> <C-^>
-
-nnoremap <silent> <C-d> :bd<CR>
-nnoremap <silent> <C-j> <C-d>
-nnoremap <silent> <C-k> <C-u>
-vnoremap <silent> <C-j> <C-d>
-vnoremap <silent> <C-k> <C-u>
 
 nnoremap <silent> <C-t> :tabnew<CR>
 nnoremap <silent> <leader>tc :tabnew<CR>:lcd ~/Code/<CR>

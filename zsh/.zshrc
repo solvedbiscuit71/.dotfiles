@@ -55,6 +55,7 @@ fi
 # -------------
 path+=(
     "$HOME/.script"
+    "/opt/homebrew/bin"
 )
 
 # -------------
