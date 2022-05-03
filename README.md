@@ -50,14 +50,7 @@ For more info: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/o
 ### Patched Font
 
 Patched fonts includes many symbol which are used by other terminal program.
-Here, we are going to install __Hack Nerd Font Mono__.
-
-```sh
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font
-```
-
-For more font check : [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+Here, we are using [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 ### Auto suggestion & Syntax Highlighting
 
@@ -81,16 +74,6 @@ To install Dracula theme,
 3. Move `/lib` to `~/.oh-my-zsh/themes`.
 
 For more info : [https://draculatheme.com](https://draculatheme.com)
-
-### fzf
-
-fzf is a fuzzy finder useful for searching through previous command, changing directory,etc.
-
-```sh
-brew install fzf
-```
-
-For more info : [https://github.com/junegunn/fzf](https://github.com/junegunn/fzf)
 
 ## Neovim
 
