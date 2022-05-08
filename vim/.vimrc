@@ -41,8 +41,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/ReplaceWithRegister'
-
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Vim-colorscheme
