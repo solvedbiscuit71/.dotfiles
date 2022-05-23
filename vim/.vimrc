@@ -49,9 +49,15 @@ colorscheme gruvbox8_hard
 " Vim-Keymaps
 let g:mapleader = ' '
 
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+
+nnoremap H ^
+nnoremap L $
+
 nnoremap <silent> cd :lcd %:h<CR>
 nnoremap <silent> <C-n> :Ex<CR>
-nnoremap <silent> <C-b> <C-^>
+nnoremap <silent> <C-d> :bd<CR>
 
 nnoremap <silent> <C-t> :tabnew<CR>
 nnoremap <silent> <leader>tc :tabnew<CR>:lcd ~/Code/<CR>
