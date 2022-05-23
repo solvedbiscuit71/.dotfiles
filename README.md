@@ -47,10 +47,34 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 For more info: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
+### Dracula theme
+
+To install Dracula theme,
+1. Download using the [GitHub .zip download](https://github.com/dracula/zsh/archive/master.zip) option and unzip them.
+2. Move `dracula.zsh-theme` to `~/.oh-my-zsh/themes`.
+3. Move `/lib` to `~/.oh-my-zsh/themes`.
+
+For more info : [https://draculatheme.com](https://draculatheme.com)
+
 ### Patched Font
 
 Patched fonts includes many symbol which are used by other terminal program.
-Here, we are using [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+Here, we are going to install __Hack Nerd Font Mono__.
+
+```sh
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+```
+
+For more nerd font check: [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+
+### Other Programming Font
+
+All of these fonts support ligatures, but Alacritty doesn't support ligatures!
+
+- [Agave](https://github.com/blobject/agave)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- [Victor Mono](https://rubjo.github.io/victor-mono/)
 
 ### Auto suggestion & Syntax Highlighting
 
@@ -66,16 +90,18 @@ Syntax Highlighting provides nice highlights with commands.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ```
 
-### Dracula theme
+### fzf
 
-To install Dracula theme,
-1. Download using the [GitHub .zip download](https://github.com/dracula/zsh/archive/master.zip) option and unzip them.
-2. Move `dracula.zsh-theme` to `~/.oh-my-zsh/themes`.
-3. Move `/lib` to `~/.oh-my-zsh/themes`.
+fzf is a fuzzy finder useful for searching through previous command, changing directory,etc.
 
-For more info : [https://draculatheme.com](https://draculatheme.com)
+```sh
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+```
 
-## Neovim
+For more info : [https://github.com/junegunn/fzf](https://github.com/junegunn/fzf)
+
+## Neovim (Optional)
 
 Check neovim's GitHub page, [https://github.com/neovim/neovim](https://github.com/neovim/neovim)
 
