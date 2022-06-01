@@ -63,7 +63,7 @@ path+=(
 # -------------
 
 # ls alternate
-alias l="exa -la"
+alias l="exa -al -s=type --icons --no-user"
 
 # VimWiki
 alias wiki="nvim ~/Documents/.vimwiki/index.md"
