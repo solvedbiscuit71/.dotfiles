@@ -46,6 +46,9 @@ call plug#end()
 " Vim-colorscheme
 colorscheme gruvbox8_hard
 
+" Vim-transparent-bg (comment line below to disable)
+hi Normal guibg=NONE ctermbg=NONE
+
 " Vim-Keymaps
 let g:mapleader = ' '
 
